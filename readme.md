@@ -1,10 +1,10 @@
 # Submitting Open Finance Bounties - Details and Instructions
 
 ## Submission Deadline
-All bounty submissions must be received no later than 11:59 PM EDT on April 30th, 2019 to be considered.
+All bounty submissions must be received no later than 11:59 PM EDT on July 10th, 2019 to be considered.
 
 ## Judging Date
-Projects will be assessed from May 1 to May 10th, 2019, and winners will be announced at the Ethereal Conference in New York, and then on Labs.ConsenSys.net and the Ethereal Hackathon Discord server at a later time!
+Projects will be assessed from July 10th to July 15th, 2019, and winners will be announced by GitCoin and Labs.
 
 ## How to Submit Your Project!
 
@@ -15,7 +15,10 @@ Clone this repo to your desktop.
 Create a branch named after your project.
 
 ### Step 2
-In the repo, there is one folder for each bounty. Open the folder that corresponds with the bounty you are submitting against, and, in that folder, create a new subfolder.
+In the repo, there is one folder for each bounty. Open the folder that corresponds with the bounty you are submitting against.
+
+### Step 3
+In the bounty's folder, *create a new subfolder for your team's project.*
 
 ### Step 3
 Name the subfolder your project name.
