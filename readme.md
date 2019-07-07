@@ -1,4 +1,4 @@
-# Submitting Open Finance Bounties - Details and Instructions
+# Submitting Beyond Blockchain Bounties - Details and Instructions
 
 ## Submission Deadline
 All bounty submissions must be received no later than 11:59 PM EDT on July 10th, 2019 to be considered.
