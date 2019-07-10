@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="/img/hospital.png" />
+  <title>HealthPrices : Comparison of Health Care Costs Across the World. Powered by the Blockchain</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Aldrich|Cabin+Condensed|Karla|Libre+Barcode+128+Text|M+PLUS+Rounded+1c|Sunflower:300|Viga&display=swap" rel="stylesheet">
+
+
+      <link rel="stylesheet" href="./style.css">
+
+
+</head>
+
+<body>
+
+  <script src="//www.amcharts.com/lib/4/core.js"></script>
+<script src="//www.amcharts.com/lib/4/maps.js"></script>
+<script src="//www.amcharts.com/lib/4/themes/animated.js"></script>
+<script src="//www.amcharts.com/lib/4/geodata/worldLow.js"></script>
+
+  <center>
+    <br />
+    <h1 style="font-family: Sans-Serif; font-size: 40px"><img src="/img/hospital.svg" style="width: 50px; vertical-align: bottom"; /> HealthPrices</h1>
+    <h3 style="font-weight: 100; font-size: 20px;" >Monthly health care costs compared by region. Self reported on the blockchain.</h3>
+    <br />
+
+    <div id="chartdiv"></div>
+
+    <div class="info" style="width: 55%">
+      <u><h2>What is this?</h2></u>
+      <h4 style="font-weight: 100;">
+        HealthPrices is a comparison of health care costs from across the globe. The prices are self-reported by our users using the Ethereum blockchain. Users can filter the map by procedure types, and hover over different territories to get a sense of where they lie on the global healthcare cost scale.
+      </h4>
+
+      <u><h2>Why do we need this?</h2></u>
+      <h4 style="font-weight: 100;">
+        Transparency in healthcare costs is extremely important. According to <a href="https://www.commonwealthfund.org/publications/other-publication/2006/mar/transparency-health-care-time-has-come" target="_blank">The Commonwealth Fund</a> healthcare cost transparency is essential for 3 reasons:
+        <ul style="text-align: left; list-style-type: none;">
+          <li><b>1.</b> To help providers improve by benchmarking their performance against others;
+          <li><b>2.</b> To encourage private insurers and public programs to reward quality and efficiency; and
+          <li><b>3.</b> To help patients make informed choices about their care.
+        </ul>
+        Just last month, President Trump <a href="https://www.whitehouse.gov/presidential-actions/executive-order-improving-price-quality-transparency-american-healthcare-put-patients-first/" target="_blank">signed an executive order</a> requiring hospitals to publicly post standard prices for medical care in an "easy-to-understand, consumer-friendly" format that will "allow patients to compare prices across hospitals." While this is a massive step forward for the United States, the rest of the world still is still lacking in healthcare transparency regulations.
+      </h4>
+    </div>
+
+    <br /><br />
+  </center>
+
+
+
+    <script  src="./script.js"></script>
+
+
+
+
+</body>
+
+</html>
