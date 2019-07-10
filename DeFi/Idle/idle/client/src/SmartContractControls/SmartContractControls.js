@@ -251,7 +251,7 @@ class SmartContractControls extends React.Component {
   render() {
     return (
       <Box textAlign={'center'} alignItems={'center'}>
-        <Form pb={[5, 4]} backgroundColor={'white'} color={'blue'}>
+        <Form pb={[5, 4]} minHeight={['auto','36em']} backgroundColor={'white'} color={'blue'} boxShadow={1}>
           <Flex flexDirection={['row','row']} width={'100%'}>
             <Box className={[styles.tab,this.props.selectedTab==='1' ? styles.tabSelected : '']} width={[1/3]} textAlign={'center'}>
               <Link display={'block'} py={[3,4]} fontSize={[3,5]} fontWeight={2} onClick={e => this.selectTab(e, '1')}>
@@ -359,8 +359,9 @@ class SmartContractControls extends React.Component {
                 }
                 {!this.props.account && 
                   <Flex
+                    alignItems={'center'}
                     flexDirection={'column'}
-                    textAlign='center'>
+                    textAlign={'center'}>
                       <Heading.h3 fontFamily={'sansSerif'} fontWeight={2} textAlign={'center'}>
                         Please connect to view your available funds.
                       </Heading.h3>
