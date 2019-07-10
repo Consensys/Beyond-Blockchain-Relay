@@ -24,11 +24,5 @@ Avanti Machado
 None
 
 ## Link to Ancillary Material
-Check README.md
 
-- **Pitch Deck:**
-- **Video Demo:**
-- **Demo URL:**
-
-## Project Launch Page
-
+- **Pitch Deck:** https://docs.google.com/presentation/d/1JbpRmjUP-BP2B7e1yMpkJlEezsVXNo2v39muQajgKq0/edit?usp=sharing
