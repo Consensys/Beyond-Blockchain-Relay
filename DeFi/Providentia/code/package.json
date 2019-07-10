@@ -1,0 +1,40 @@
+{
+  "name": "erc-1155",
+  "version": "1.0.0",
+  "description": "ERC-1155 Reference Implementation",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.0",
+    "bignumber": "^1.1.0",
+    "bignumber.js": "^4.1.0",
+    "openzeppelin-solidity": "^2.3.0",
+    "truffle-assertions": "^0.9.1",
+    "truffle-hdwallet-provider": "^1.0.12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0"
+  },
+  "scripts": {
+    "test": "truffle test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enjin/erc-1155.git"
+  },
+  "keywords": [
+    "enjin",
+    "coin",
+    "ethereum"
+  ],
+  "author": "Enjin PTE LTD",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/enjin/erc-1155/issues"
+  },
+  "homepage": "https://github.com/enjin/erc-1155#readme"
+}

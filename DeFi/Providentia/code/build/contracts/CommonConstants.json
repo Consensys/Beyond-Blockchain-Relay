@@ -1,0 +1,279 @@
+{
+  "contractName": "CommonConstants",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.0+commit.1d4f565a\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{},\"notice\":\"Note: Simple contract to use as base for const vals\\r\"}},\"settings\":{\"compilationTarget\":{\"/C/Users/tredg/Providentia/contracts/Common.sol\":\"CommonConstants\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/tredg/Providentia/contracts/Common.sol\":{\"keccak256\":\"0x0d89b028075676ec36d3c3564fb222e0bad4317e2c6561639be2a2f1fa510283\",\"urls\":[\"bzzr://88c0afc47fa6ba5721b3f2f5248acfb31d7910d187f4b21e9c5073c94836445e\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603580601d6000396000f3fe6080604052600080fdfea165627a7a723058207ebb0086ea26ebc06ef204fe484a5e0a58b0c6ecad458a73102b8e0f359bb2f30029",
+  "deployedBytecode": "0x6080604052600080fdfea165627a7a723058207ebb0086ea26ebc06ef204fe484a5e0a58b0c6ecad458a73102b8e0f359bb2f30029",
+  "sourceMap": "93:330:1:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;93:330:1;;;;;;;",
+  "deployedSourceMap": "93:330:1:-;;;;;",
+  "source": "pragma solidity ^0.5.0;\r\n\r\n/**\r\n    Note: Simple contract to use as base for const vals\r\n*/\r\ncontract CommonConstants {\r\n\r\n    bytes4 constant internal ERC1155_ACCEPTED = 0xf23a6e61; // bytes4(keccak256(\"onERC1155Received(address,address,uint256,uint256,bytes)\"))\r\n    bytes4 constant internal ERC1155_BATCH_ACCEPTED = 0xbc197c81; // bytes4(keccak256(\"onERC1155BatchReceived(address,address,uint256[],uint256[],bytes)\"))\r\n}\r\n",
+  "sourcePath": "C:\\Users\\tredg\\Providentia\\contracts\\Common.sol",
+  "ast": {
+    "absolutePath": "/C/Users/tredg/Providentia/contracts/Common.sol",
+    "exportedSymbols": {
+      "CommonConstants": [
+        27
+      ]
+    },
+    "id": 28,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "Note: Simple contract to use as base for const vals\r",
+        "fullyImplemented": true,
+        "id": 27,
+        "linearizedBaseContracts": [
+          27
+        ],
+        "name": "CommonConstants",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 23,
+            "name": "ERC1155_ACCEPTED",
+            "nodeType": "VariableDeclaration",
+            "scope": 27,
+            "src": "127:54:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 21,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "127:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30786632336136653631",
+              "id": 22,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "171:10:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_4063915617_by_1",
+                "typeString": "int_const 4063915617"
+              },
+              "value": "0xf23a6e61"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 26,
+            "name": "ERC1155_BATCH_ACCEPTED",
+            "nodeType": "VariableDeclaration",
+            "scope": 27,
+            "src": "269:60:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 24,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "269:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30786263313937633831",
+              "id": 25,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "319:10:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3155786881_by_1",
+                "typeString": "int_const 3155786881"
+              },
+              "value": "0xbc197c81"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 28,
+        "src": "93:330:1"
+      }
+    ],
+    "src": "0:425:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/tredg/Providentia/contracts/Common.sol",
+    "exportedSymbols": {
+      "CommonConstants": [
+        27
+      ]
+    },
+    "id": 28,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 20,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "Note: Simple contract to use as base for const vals\r",
+        "fullyImplemented": true,
+        "id": 27,
+        "linearizedBaseContracts": [
+          27
+        ],
+        "name": "CommonConstants",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": true,
+            "id": 23,
+            "name": "ERC1155_ACCEPTED",
+            "nodeType": "VariableDeclaration",
+            "scope": 27,
+            "src": "127:54:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 21,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "127:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30786632336136653631",
+              "id": 22,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "171:10:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_4063915617_by_1",
+                "typeString": "int_const 4063915617"
+              },
+              "value": "0xf23a6e61"
+            },
+            "visibility": "internal"
+          },
+          {
+            "constant": true,
+            "id": 26,
+            "name": "ERC1155_BATCH_ACCEPTED",
+            "nodeType": "VariableDeclaration",
+            "scope": 27,
+            "src": "269:60:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_bytes4",
+              "typeString": "bytes4"
+            },
+            "typeName": {
+              "id": 24,
+              "name": "bytes4",
+              "nodeType": "ElementaryTypeName",
+              "src": "269:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes4",
+                "typeString": "bytes4"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30786263313937633831",
+              "id": 25,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "319:10:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_3155786881_by_1",
+                "typeString": "int_const 3155786881"
+              },
+              "value": "0xbc197c81"
+            },
+            "visibility": "internal"
+          }
+        ],
+        "scope": 28,
+        "src": "93:330:1"
+      }
+    ],
+    "src": "0:425:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.11",
+  "updatedAt": "2019-07-10T19:03:08.423Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {},
+    "notice": "Note: Simple contract to use as base for const vals\r"
+  }
+}
