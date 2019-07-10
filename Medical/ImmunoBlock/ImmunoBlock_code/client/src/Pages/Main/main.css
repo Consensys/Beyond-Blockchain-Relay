@@ -1,0 +1,33 @@
+table td {
+    padding: 0% 1%;
+}
+
+table tr {
+    display: inline-grid;
+}
+
+@media (min-width: 1024px) {
+    table tr {
+        display: inline-block;
+    }
+}
+
+div.control div.select, div.control select {
+    width: 100%;
+}
+
+div.control {
+    text-align: inherit;
+}
+
+.control label.radio {
+    width: 15%;
+}
+
+.control input[type="radio"] {
+    margin: 8%;
+}
+
+input[type="submit"] {
+    width: 35%;
+}
