@@ -39,10 +39,16 @@ Fill out the submission.md template, included at the top of the bounty's folder 
 **This must be included to be considered for the bounty prize.**
 
 ### Step 7
-Push changes to the origin of the forked repo
+Commit your changes and push your branch to your forked repo.
 
 ### Step 8
-Raise PR against the original Beyond-Blockchain-Relay repo from the forked repo using github ui
+Raise PR against the original Beyond-Blockchain-Relay repo from the forked repo On GitHub. To create the PR, if you go to the forked repo on github it will have a big green popup asking if you want to make a PR.
+
+![Creating a Pull Request from a Forked Repo](https://i.imgur.com/TQAgPh4.png)
+
+If the green button doesn't show, there is a the "New pull request" button on the left, just click that and select the branch   to create the PR.
+
+![Select your branch to create the pull request from](https://i.imgur.com/2ClfyAm.png)
 
 ### Step 9
 ![Congratulations](https://media.giphy.com/media/ehhuGD0nByYxO/giphy.gif)
