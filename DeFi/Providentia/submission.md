@@ -9,7 +9,9 @@ Providentia
 Decentralized marketplace for student’s financing. 
 
 Providentia aligns incentives among students, schools and investors creating a new assets class (the token) based on students’ and school performance.
+
 The marketplace allows investors to invest in schools and students and track the investment with full transparency using the built-in credit score algorithm. The token is tradable creating a secondary market for the asset.
+
 Schools have the incentive to focus on student’s performance in order to attract external investors.
 Students are provided with a platform to select the best schools based on their performance, apply for the immediate financing and focus on finding the best job.
 
@@ -20,6 +22,7 @@ List each team member, along with the below fields
 * **Daniele Ugolini**
 * dan.ugolini@gmail.com
 * Yes
+
 
 
 * **Rachid Moulakhnif**
