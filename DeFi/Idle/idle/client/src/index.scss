@@ -1,0 +1,19 @@
+// @import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url('https://rsms.me/inter/inter.css');
+@import 'colors';
+
+body {
+  margin: 0 auto;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  // font-family: "Roboto", "Helvetica", "Arial";
+  font-family: 'Inter', sans-serif;;
+}
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+.pointer {
+  cursor: pointer;
+}

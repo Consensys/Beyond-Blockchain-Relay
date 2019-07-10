@@ -1,0 +1,101 @@
+.mainInputContainer {
+  box-shadow:0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.mainInput {
+  background-color: transparent;
+  color: white;
+  &:focus {
+    border-color: white !important;
+  }
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: white !important;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: white !important;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: white !important;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: white !important;
+  }
+}
+.aprLabel{
+  font-size:1.4em;
+  text-align:center;
+}
+.shadow {
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.2);
+}
+.lendButton,
+button{
+  outline:none;
+}
+.link{
+  text-decoration:underline;
+}
+.tab{
+  color:#fff;
+  background-color:#0036ff;
+}
+.tab a{
+  text-align:center;
+  color:#fff;
+  text-decoration:none;
+  cursor:pointer;
+}
+.tab a:hover{
+  color:inherit;
+  text-decoration:none;
+}
+.tabSelected{
+  color:#0036ff;
+  background-color:#fff;
+}
+.tabSelected a{
+  color:#0036ff;
+}
+.magicButton{
+  background-image: url(/images/magical-gradient.png);
+  background-position: center center;
+  animation:rainbow 2s linear infinite;
+}
+/* sc-component-id: sc-keyframes-rainbow */
+
+@-webkit-keyframes rainbow {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    -moz-filter: hue-rotate(0deg);
+    -o-filter: hue-rotate(0deg);
+    -ms-filter: hue-rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -o-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+@keyframes rainbow {
+  from {
+    -webkit-filter: hue-rotate(0deg);
+    -moz-filter: hue-rotate(0deg);
+    -o-filter: hue-rotate(0deg);
+    -ms-filter: hue-rotate(0deg);
+    -webkit-filter: hue-rotate(0deg);
+    filter: hue-rotate(0deg);
+  }
+  to {
+    -webkit-filter: hue-rotate(360deg);
+    -moz-filter: hue-rotate(360deg);
+    -o-filter: hue-rotate(360deg);
+    -ms-filter: hue-rotate(360deg);
+    -webkit-filter: hue-rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
