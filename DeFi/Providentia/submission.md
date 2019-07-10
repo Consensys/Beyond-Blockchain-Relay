@@ -19,15 +19,8 @@ Students are provided with a platform to select the best schools based on their 
 ## Project Team
 List each team member, along with the below fields
 
-* **Daniele Ugolini**
-* dan.ugolini@gmail.com
-* Yes
-
-
-
-* **Rachid Moulakhnif**
-* rachid.moulakhnif@gmail.com
-* Yes
+* **Daniele Ugolini** / dan.ugolini@gmail.com / Yes
+* **Rachid Moulakhnif** / rachid.moulakhnif@gmail.com / Yes
 
 ## Project Advisor(s)
 **Ali Hamed** - Partner at CoVenture
