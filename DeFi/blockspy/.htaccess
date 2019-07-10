@@ -1,0 +1,7 @@
+RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME}.php -f
+#RewriteRule (.*) $1.php [L]
+#RewriteCond %{REQUEST_FILENAME}.html -f
+#RewriteRule (.*) $1.html [L]
+
+RewriteRule ^address/(.*)$ /address.html#$1 [NE,L]
