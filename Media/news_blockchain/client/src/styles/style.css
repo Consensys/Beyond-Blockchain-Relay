@@ -1,0 +1,44 @@
+.bg-nav {
+  background-color: #535466;
+}
+
+html, body {
+  height: 100%;
+}
+
+#container {
+  min-height: 100%;
+  height: 100%;
+}
+
+.site-wrapper {
+  min-height: 100%;
+  height: 100%;
+}
+
+.site-sub-wrapper {
+  min-height: 100%;
+  height: 100%;
+}
+
+main {
+  min-height: 100%;
+  height: 100%;
+}
+
+.news {
+  min-height: 100%;
+  height: 100%;
+}
+
+.side-nav {
+  min-height: 100%;
+  height: 100%;
+  position: fixed;
+  overflow-y: scroll;
+}
+
+.side-nav-sub {
+  min-height: 100%;
+  height: 100%;
+}
