@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Honest Media App</title>
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">Honest Media App</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+
+      <div id="petsRow" class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Contract</h3>
+            </div>
+            <div class="panel-body">
+              <h4>Operational</h4>
+              <strong>Is contract operational</strong>: <span id="TTBalance"></span> <br/><br/>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Register account -->
+    <div id="petsRow" class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Register account</h3>
+            </div>
+            <div class="panel-body">
+              <form>
+                <h4>Address to register:</h4>
+                <input type="text" id="txt-registerAddress" size=40><br><br>
+                <h4>Amount: </h4>
+                <input type="number" id="txt-amountToRegister" size=40><br><br>
+                <select id="accountType">
+                  <option value="contributor">Contributor</option>
+                  <option value="reader">Reader</option>
+                  <option value="validator">Validator</option>
+                </select>
+                <button class="btn btn-primary" id="button-register" type="button">Register</button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Display Rating -->
+    <div id="petsRow" class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Display Rating</h3>
+            </div>
+            <div class="panel-body">
+              <form>
+                <h4>Address of Contributor:</h4>
+                <input type="text" id="txt-displayAddress" size=40><br><br>
+                <span id="SpanRating"></span> <strong> Rating</strong> <br/>
+                <button class="btn btn-primary" id="button-display" type="button">Display</button>
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Start Add Article Div-->
+      <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-push-2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Add Article</h3>
+              </div>
+              <div class="panel-body">
+                  <div class="panel-body">
+                      <h4>Contibutor's Address:</h4>
+                      <input type="text" id="txt-address" size=40><br><br>
+                      <h4>Article Name: </h4>
+                      <input type="text" id="txt-articleName" size=40><br><br>
+                      <h4>Upload Article: </h4>
+                      <input type="file" name="articleToUpload" id="fileToUpload" data-id="1"><br>
+                      <button class="btn-upload" id="button-Article" type="button" >Upload</button><br><br>
+                      <!--<h4>Upload Article References: </h4>
+                      <input type="file" name="referencesToUpload" id="fileToUpload" data-id="2"><br>
+                      <button class="btn-upload" id="buttonRef" type="button" data-id="4">Upload</button><br><br>-->
+                      <h4>Stake: </h4>
+                      <input type="text" id="txt-articleStake" size=4><br><br>
+                      <button class="btn btn-primary" id="button-Add" type="button" data-id="5">Add Article</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- End Add Article Div-->
+
+      <!-- Start Article List Div-->
+      <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-push-2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Show all articles</h3>
+              </div>
+              <div class="panel-body">
+                <section>
+                  <ul class="list" id='articleList' style="list-style: none;">
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- Start Article List Div-->
+
+      <!-- Start Challenges Waiting To Be ruled List Div-->
+      <div class="row">
+          <div class="col-xs-12 col-sm-8 col-sm-push-2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Show all Challenges awaiting ruling</h3>
+              </div>
+              <div class="panel-body">
+                <section>
+                  <ul class="list" id='challengesToRuleList' style="list-style: none;">
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!-- End Challenges Waiting To Be ruled List Div-->
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="https://unpkg.com/ipfs/dist/index.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
