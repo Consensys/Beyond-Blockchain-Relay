@@ -101,10 +101,10 @@ class Landing extends Component {
           <Box className={[styles.bgContainer,styles.bg2]} display={['none','block']}></Box>
           <Box position={'relative'} zIndex={10}>
             <Flex flexDirection={'column'} alignItems={['center','flex-start']} maxWidth={["50em", "50em"]} mx={['auto',6]} pb={3} px={[3,0]} textAlign={['center','left']} pt={['10vh', '20vh']}>
-              <Heading.h1 fontFamily={'sansSerif'} className={[styles.title]} fontSize={[6,7]} textAlign={['center','left']}>
+              <Heading.h1 fontFamily={'sansSerif'} lineHeight={'1.1em'} mb={'0.5em'} fontSize={[6,7]} textAlign={['center','left']}>
                 Get the best out of your lend, with just one token
               </Heading.h1>
-              <Heading.h2 className={[styles.subtitle]} fontSize={[3,4]} textAlign={['center','left']}>
+              <Heading.h2 fontWeight={'400'} lineHeight={'2em'} fontSize={[3,4]} textAlign={['center','left']}>
                 We connect different lending protocols with a decentralized rebalance process to always give you the best available rate
               </Heading.h2>
               <Button
