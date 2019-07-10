@@ -9,21 +9,21 @@ Projects will be assessed from July 10th to July 15th, 2019, and winners will be
 ## How to Submit Your Project!
 
 ### Step 1
-Clone this repo to your desktop.
+1) Fork Beyond-Blockchain-Relay from github UI -  https://github.com/ConsenSys/Beyond-Blockchain-Relay
 
 ### Step 2
-Create a branch named after your project.
+Clone forked repo to local machine (master branch) named after your project
 
-### Step 2
+### Step 3
 In the repo, there is one folder for each bounty. Open the folder that corresponds with the bounty you are submitting against.
 
-### Step 3
-In the bounty's folder, *create a new subfolder for your team's project.*
+### Step 4
+Add your app **folder** in the respective project folder (e.g. DeFi, Media, Medical) of the hackathon
 
-### Step 3
+#### Step 4.1
 Name the subfolder your project name.
 
-### Step 4
+### Step 5
 Submit the following in your project's folder:
 - Submission.md template
 - A single file that pitches the product (video, PDF, deck)
@@ -33,16 +33,18 @@ All submissions, including all code, must be open source for future use and refe
 
 As a reminder, we are looking for projects that address a real problem and teams that have shown the progress and entrepreneurial instincts to make something real and get it out in the world. Your application should communicate this. _The more compelling the presentation, the better your team does!_
 
-### Step 5
+### Step 6
 Fill out the submission.md template, included at the top of the bounty's folder with all relevant information.
 
 **This must be included to be considered for the bounty prize.**
 
-### Step 6
-Create a pull request with your team's folder submission to be merged into Master. Submit it to the repo.
-
-
 ### Step 7
+Push changes to the origin of the forked repo
+
+### Step 8
+Raise PR against the original Beyond-Blockchain-Relay repo from the forked repo using github ui
+
+### Step 9
 ![Congratulations](https://media.giphy.com/media/ehhuGD0nByYxO/giphy.gif)
 Congratulations!
 
