@@ -1,0 +1,10 @@
+$copyColor: #3F3D4B;
+
+.button {
+  color: $copyColor !important;
+  border-color: transparent !important;
+  &:hover {
+    border-color: #ccc !important;
+    background-color: #f3f2f2 !important;
+  }
+}
