@@ -1,0 +1,102 @@
+.tooltip_if_hover {
+	display: inline-block;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.tooltip_if_hover::after {
+display: inline;
+font-family: FontAwesome;
+content: "\f129";
+position: relative;
+font-size: 9px;
+color: #515151;
+background: #fff;
+padding: 2px 5px;
+border-radius: 36px;
+top: -10px;
+border: solid;
+border-width: 0.1px;
+border-color: #686868;
+margin-left: 5px;
+}
+
+.show_on_hover {
+	display: none;
+}
+
+.tooltip_if_hover:hover .show_on_hover {
+	display: block !important;
+	position: absolute;
+	z-index: 1;
+	background: #fff;
+	box-shadow: 0 10px 30px 5px rgba(0,0,0,0.3),0 0 1px 1px rgba(0,0,0,0.05);
+	padding: 5px;
+	border-radius: 4px;
+	max-width: 400px;
+	font-size: 18px;
+  -o-transition:color .2s ease-out, background 1s ease-in;
+  -ms-transition:color .2s ease-out, background 1s ease-in;
+  -moz-transition:color .2s ease-out, background 1s ease-in;
+  -webkit-transition:color .2s ease-out, background 1s ease-in;
+  transition:color .2s ease-out, background 1s ease-in;
+}
+
+@media only screen and (max-width: 600px) {
+.site-content {
+margin: 0 10px;
+}
+.tooltip_if_hover:hover .show_on_hover {
+left: 20px;
+right: 20px;
+}
+}
+
+.entry .entry-header, .entry .entry-content, .entry .entry-summary, .post-template-default #main {
+max-width: 728px;
+margin: auto !important;
+padding: 0 !important;
+}
+
+.entry h1 {
+font-size: 34px;
+}
+
+.entry h2 {
+font-size: 26px;
+}
+
+.entry h3 {
+font-size: 22px;
+}
+
+.entry h4 {
+font-size: 21px;
+}
+
+.entry h5 {
+font-size: 20px;
+}
+
+.entry h6 {
+font-size: 19px;
+}
+
+.entry p {
+font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+#colophon {
+display: none;
+}
+
+.entry h1::before, .entry h2::before {
+	content: none !important;
+}
+
+.post-template-default .nav-links, .post-template-default #comments, .post-template-default .entry-footer {
+margin: 0 !important;
+}
+
+.post-template-default .cat-links {
+	display: none !important;
+}
