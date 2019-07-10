@@ -1,0 +1,31 @@
+page-home {
+    .home-content {
+        background: color($colors, primary);
+        background-image: url('/assets/img/background-home.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    .logo-row {
+        padding: 50px 0;
+    }
+    ion-row {
+        align-items: center;
+        text-align: center;
+    }
+    scroll-content {
+        overflow-y: auto !important;
+    }
+    .round-card {
+        border-radius: 30px !important;
+        font-size: 0.9em;
+        margin-bottom: 10px;
+        border-bottom: 0px !important;
+        box-shadow: none !important;
+        max-width: 300px;
+    }
+    ion-card[hover],
+    ion-card:hover {
+        background-color: color($colors, light);
+        cursor: pointer;
+    }
+}

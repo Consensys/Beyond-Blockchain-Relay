@@ -1,0 +1,133 @@
+<!--
+  Generated template for the PaymentConfirmationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Receipt</ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div text-center *ngIf="confirmation" padding>
+    <h1>
+      <ion-icon style="font-size: 150px; color:green" name="checkmark-circle-outline"></ion-icon>
+    </h1>
+  </div>
+
+  <div class="invoice-info">
+
+    <div *ngIf="invoice">
+      <ion-list>
+
+        <ion-item text-center no-lines padding>
+          <strong>
+            <span float-left>
+              {{invoice.localAmount}}
+              <span ion-text>EGP</span>
+            </span>
+          </strong>
+          <span>
+            <ion-icon name="arrow-forward"></ion-icon>
+          </span>
+          <strong>
+            <span float-right>
+              {{invoice.ethAmount}}
+              <span ion-text>ETH</span>
+            </span>
+          </strong>
+        </ion-item>
+
+        <ion-item no-lines>
+          <ion-avatar item-start>
+            <account-icon account="{{invoice.seller}}"></account-icon>
+          </ion-avatar>
+          <h2 ion-text color='primary'>Seller</h2>
+          <p ion-text>{{invoice.seller}}</p>
+        </ion-item>
+
+        <ion-item no-lines>
+          <ion-avatar item-start>
+            <account-icon account="{{invoice.buyer}}"></account-icon>
+          </ion-avatar>
+          <h2 ion-text color='primary'>Buyer </h2>
+          <p ion-text>{{invoice.buyer}}</p>
+        </ion-item>
+
+        <ion-item no-lines *ngIf="invoice.liquidityProvider != '0x0000000000000000000000000000000000000000'">
+          <ion-avatar item-start>
+            <account-icon account="{{invoice.liquidityProvider}}"></account-icon>
+          </ion-avatar>
+          <h2 ion-text color='primary'>Liquidity Provider</h2>
+          <p ion-text>{{invoice.liquidityProvider}}</p>
+        </ion-item>
+
+      </ion-list>
+    </div>
+
+
+
+    <div padding>
+
+      <hr>
+
+      <p>
+        <ion-note>Invoice Number</ion-note>
+        <span float-right>{{invoice.id}}</span>
+      </p>
+
+      <p>
+        <ion-note>Payed at</ion-note>
+        <span float-right>{{invoice.paidAt | date:'dd MMM yyyy - h:mma'}}</span>
+      </p>
+
+      <p *ngIf="invoice.settledAt">
+        <ion-note>Settled at</ion-note>
+        <span float-right>{{invoice.settledAt | date:'dd MMM yyyy - h:mma'}}</span>
+      </p>
+
+    </div>
+
+
+
+    <div *ngIf="transactionReceipt" padding>
+
+      <hr>
+
+      <p>
+        <ion-note>transaction hash</ion-note>
+        <span float-right>{{transactionReceipt.transactionHash}}</span>
+      </p>
+      <p>
+        <ion-note>block hash</ion-note>
+        <span float-right>{{transactionReceipt.blockHash}}</span>
+      </p>
+
+      <p>
+        <ion-note>block number</ion-note>
+        <span float-right>{{transactionReceipt.blockNumber}}</span>
+      </p>
+      <p>
+        <ion-note>gas used</ion-note>
+        <span float-right>{{transactionReceipt.gasUsed}}</span>
+      </p>
+      <p>
+        <ion-note>cumulative gas used</ion-note>
+        <span float-right>{{transactionReceipt.cumulativeGasUsed}}</span>
+      </p>
+      <p>
+        <ion-note>status</ion-note>
+        <span float-right>{{transactionReceipt.status}}</span>
+      </p>
+    </div>
+
+  </div>
+</ion-content>

@@ -1,0 +1,29 @@
+page-wallet-error {
+    .container {
+        display: flex;
+        /* establish flex container */
+        flex-direction: column;
+        /* make main axis vertical */
+        justify-content: center;
+        /* center items vertically, in this case */
+        align-items: center;
+        /* center items horizontally, in this case */
+        /*height: 650px;*/
+    }
+    .home-content {
+        background: color($colors, primary);
+        background-image: url('/assets/img/background-home.jpg');
+        background-size: cover;
+        background-position: center center;
+    }
+    .logo-row {
+        padding: 50px 0;
+    }
+    ion-row {
+        align-items: center;
+        text-align: center;
+    }
+    scroll-content {
+        overflow-y: auto !important;
+    }
+}

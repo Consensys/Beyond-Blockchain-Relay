@@ -1,0 +1,46 @@
+<ion-content class="home-content">
+  <ion-slides>
+    <div style="margin: 0 auto">
+
+      <ion-row class="logo-row">
+        <ion-col text-center>
+          <img alt="logo" style="height: 90px; filter: brightness(0) invert(1)" src="assets/imgs/logo-name.png" />
+          <!--<h1 ion-text color="light" no-padding no-margin>Deben</h1>-->
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+
+        <ion-col>
+          <ion-card class="round-card" (click)="goToSeller()">
+            <ion-avatar item-left>
+              <img src="assets/imgs/seller.png" />
+            </ion-avatar>
+            <ion-card-title color="primary">
+              Seller
+            </ion-card-title>
+            <ion-card-content text-wrap color="dark">
+              A registered seller in our platform.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+        <ion-col>
+          <ion-card class="round-card" (click)="goToBuyer()">
+            <ion-avatar>
+              <img src="assets/imgs/buyer.jpg" />
+            </ion-avatar>
+            <ion-card-title color="primary">
+              Buyer
+            </ion-card-title>
+            <ion-card-content text-wrap color="dark">
+              Just want to make a quick payment.
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+
+      </ion-row>
+
+    </div>
+  </ion-slides>
+</ion-content>
