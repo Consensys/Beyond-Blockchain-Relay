@@ -1,0 +1,225 @@
+@charset "UTF-8";
+/*roadmap*/
+/* color de la linea central y puntos */
+/* color de la linea */
+/* color de los títulos */
+.roadmap {
+  margin-bottom: 110px;
+}
+.roadmap .rcontainer {
+  overflow: hidden;
+  padding-top: 40px;
+}
+.roadmap-item .list-title {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  width: 100%;
+  padding-bottom: 18px;
+  font-size: 1.43em;
+  font-weight: 600;
+  border-bottom: 2px solid #333333;
+  color: #fff;
+}
+.roadmap-item.executed .list-title {
+  color: #d450d8;
+}
+.roadmap-item.executed li {
+  background: linear-gradient(45deg, #00c280 23%, #01a094 33%, #0434da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.roadmap-list {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #888888;
+  padding-left: 0;
+}
+.roadmap-list li {
+  position: relative;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+.roadmap-list li::before {
+  position: absolute;
+  content: '';
+}
+.roadmap-list li:before {
+  width: 30px;
+  height: 100%;
+  left: 0;
+  z-index: 200;
+}
+.roadmap-wrapper {
+  position: relative;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.roadmap-wrapper::after {
+  position: absolute;
+  content: '';
+}
+.roadmap-wrapper::before {
+  position: absolute;
+  content: '';
+}
+.roadmap-wrapper:after, .roadmap-wrapper:before {
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  height: 100%;
+  width: 2px;
+  z-index: 1;
+}
+.roadmap-wrapper:after {
+  background-color: #d450d8;
+}
+.roadmap-wrapper:before {
+  background-color: #d450d8;
+  left: calc(50% - 1px);
+}
+.roadmap-item-wrap {
+  position: relative;
+  z-index: 10;
+}
+.roadmap-item-wrap:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.roadmap-item-wrap .roadmap-item {
+  position: relative;
+}
+.roadmap-item-wrap .roadmap-item::before {
+  position: absolute;
+  content: '';
+}
+.roadmap-item-wrap .roadmap-item:before {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  display: inline-block;
+  line-height: 40px;
+  margin-top: -15px;
+  z-index: 2;
+  color: #d450d8;
+  content: ' \25CF';
+  font-size: 30px;
+}
+.roadmap-item-wrap.right .roadmap-item {
+  padding-left: 70px;
+  float: right;
+}
+.roadmap-item-wrap.right .roadmap-item:before {
+  right: 100%;
+  transform: translateX(50%);
+}
+.roadmap-item-wrap.right .list-title {
+  padding-left: 70px;
+  left: auto;
+  right: 0;
+}
+.roadmap-item-wrap.left .roadmap-item {
+  padding-right: 70px;
+}
+.roadmap-item-wrap.left .roadmap-item:before {
+  left: 100%;
+  transform: translateX(-50%);
+}
+.roadmap-item {
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .roadmap-list {
+    font-size: 14px;
+  }
+
+  .token-sale-items-wrapper {
+    left: 40px;
+  }
+
+  .roadmap-item-wrap.left .roadmap-item,
+  .roadmap-item-wrap.right .roadmap-item {
+    padding-right: 35px;
+  }
+}
+@media (max-width: 992px) {
+  .roadmap-wrapper:before, .roadmap-wrapper:after {
+    display: none;
+  }
+  .roadmap-item {
+    width: 100%;
+  }
+  .roadmap-item .list-title {
+    position: relative;
+    top: 0;
+  }
+  .roadmap-item-wrap {
+    margin-bottom: 25px;
+  }
+  .roadmap-item-wrap .list-title {
+    padding-left: 25px !important;
+  }
+  .roadmap-item-wrap .roadmap-item {
+    padding: 0 5px 0 0 !important;
+  }
+  .roadmap-item-wrap .roadmap-item.right:before, .roadmap-item-wrap .roadmap-item.left:before {
+    width: 30px;
+    height: 30px;
+    margin-left: 0;
+    bottom: 0;
+    top: 1.43em;
+    margin-top: 0;
+    left: 0;
+    right: 100%;
+    line-height: 0;
+    transform: translateX(0px) translateY(0%);
+  }
+  .roadmap-list {
+    padding: 14px 0 0 25px;
+  }
+}
+@media (max-width: 576px) {
+  .roadmap {
+    margin-bottom: 25px;
+  }
+  .roadmap .section-title {
+    margin-bottom: 25px;
+  }
+  .roadmap-item-wrap {
+    margin-bottom: 21px;
+  }
+  .roadmap-item .list-title {
+    font-size: 14px;
+    padding-bottom: 12px;
+  }
+  .roadmap-list {
+    font-size: 12px;
+    padding-top: 10px;
+  }
+  .roadmap-list li {
+    padding-left: 18px;
+  }
+  .roadmap-list li:before {
+    background: url(/assets/img/home/roadmap-list-point.png) no-repeat left 7px;
+    background-size: 4px;
+  }
+
+  .roadmap-item-wrap .roadmap-item:before {
+    width: 35px;
+    height: 35px;
+    top: 10px;
+    left: -4px !important;
+  }
+  .roadmap-item-wrap.left .roadmap-item:before {
+    right: -6px;
+  }
+  .roadmap-item-wrap.right .roadmap-item:before {
+    left: -6px;
+  }
+}
