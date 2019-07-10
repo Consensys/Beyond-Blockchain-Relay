@@ -1,0 +1,6 @@
+{
+  "appId": "com.deben.store",
+  "appName": "Deben",
+  "bundledWebRuntime": true,
+  "webDir": "www"
+}

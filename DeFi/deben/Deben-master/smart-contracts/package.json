@@ -1,0 +1,26 @@
+{
+  "name": "deben.sol",
+  "version": "0.0.1",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "truffle-hdwallet-provider": "0.0.5",
+    "zeppelin-solidity": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "truffle test",
+    "migrate": "truffle migrate",
+    "ganache": "truffle migrate --network ganache",
+    "testrpc": "truffle migrate --network testrpc",
+    "rinkeby": "truffle migrate --network rinkeby",
+    "ropsten": "truffle migrate --network ropsten",
+    "kovan": "truffle migrate --network kovan",
+    "build": "truffle compile"
+  },
+  "author": "",
+  "license": "ISC"
+}

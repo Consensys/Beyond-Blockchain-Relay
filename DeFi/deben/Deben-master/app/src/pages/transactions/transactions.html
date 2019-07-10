@@ -1,0 +1,99 @@
+<!--
+  Generated template for the TransactionsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <deben-header>Transactions
+  </deben-header>
+</ion-header>
+
+<ion-footer>
+  <ion-buttons text-center>
+    <button ion-button (click)="onSettleClicked()">
+      <span ion-text>Seattle</span>
+    </button>
+  </ion-buttons>
+</ion-footer>
+
+<ion-content scroll="false">
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingText="Pull to refresh">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-searchbar (ionInput)="getItems($event)" (ionCancel)="onCancel($event)"></ion-searchbar>
+
+  <ion-scroll style="width:100%; height:100%" scrollY="true">
+    <div *ngIf="transactions.length > 0">
+      <ion-list *ngIf="screenWidth >= 1000" scroll="true">
+
+        <ion-item-divider>
+          <ion-grid item-content>
+            <ion-row>
+              <ion-col col-1>
+                Select
+              </ion-col>
+              <ion-col col-3>Price</ion-col>
+              <ion-col col-1>State</ion-col>
+              <ion-col col-3>Payed at</ion-col>
+              <ion-col>{{ type == 'seller' ? 'Buyer' : 'Seller'}}</ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item-divider>
+
+
+        <ion-item *ngFor="let tra of transactions; let i = index" (click)="openInvoiceModal(tra)">
+          <ion-grid item-content>
+            <ion-row>
+              <ion-col col-1>
+                <ion-checkbox [(ngModel)]="tra.checked" (ionChange)="toggleCheckedTranscation($event, tra)"></ion-checkbox>
+              </ion-col>
+              <ion-col col-3>
+                <strong>{{tra.localAmount}}
+                  <ion-note color='primary'>EGP</ion-note>
+                </strong>
+              </ion-col>
+              <ion-col col-1>
+                <ion-badge>
+                  {{tra.liquidityProvider == "0x0000000000000000000000000000000000000000"?
+                  'Paid':'Settled'}}
+                </ion-badge>
+              </ion-col>
+              <ion-col col-3>{{tra.paidAt | date:'dd MMM yyyy - h:mma'}}</ion-col>
+              <ion-col ion-text color='primary'>
+                <strong>
+                  {{ type == 'seller' ? tra.buyer : tra.seller}}
+                </strong>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+
+      </ion-list>
+
+      <ion-list *ngIf="screenWidth < 1000" scroll="true">
+
+        <ion-item *ngFor="let tra of transactions; let i = index" (click)="openInvoiceModal(tra)">
+          <ion-avatar item-start>
+            <account-icon account="{{ type == 'seller' ? tra.buyer : tra.seller}"></account-icon>
+          </ion-avatar>
+          <ion-label>
+            <h2>{{tra.localAmount}}
+              <ion-note color='primary'>EGP</ion-note>
+            </h2>
+            <p>
+              <ion-note>{{ type == 'seller' ? 'From' : 'To'}}</ion-note> {{ type == 'seller' ? tra.buyer : tra.seller}}</p>
+          </ion-label>
+          <ion-note class="
+              top-note" item-end>{{tra.paidAt | date:'dd MMM yyyy - h:mma'}}</ion-note>
+
+        </ion-item>
+      </ion-list>
+
+    </div>
+
+  </ion-scroll>
+</ion-content>

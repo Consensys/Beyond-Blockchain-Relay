@@ -1,0 +1,51 @@
+<!--
+  Generated template for the ErrorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content class="home-content">
+
+  <ion-row class="logo-row">
+    <ion-col text-center>
+      <img alt="logo" style="height: 90px; filter: brightness(0) invert(1)" src="assets/imgs/logo-name.png" />
+      <!--<h1 ion-text color="light" no-padding no-margin>Deben</h1>-->
+    </ion-col>
+  </ion-row>
+
+  <div [ngSwitch]="error">
+
+    <div class="container" *ngSwitchCase="'account'">
+      <div ion-text color="light" padding>
+        <h1>Opps! your account is locked,</h1>
+        <h3>Please unlock your account and try again.</h3>
+      </div>
+      <a padding button clear>
+        <img width="400" src="assets/imgs/unlock-account.png">
+      </a>
+    </div>
+
+    <div class="container" *ngSwitchCase="'network'">
+      <div ion-text color="light" padding>
+        <h1>Opps! you are on the wrong network,</h1>
+        <h3>Please switch network to <span bold>Ropsten</span> and try again.</h3>
+      </div>
+      <a padding button clear>
+        <img width="400" src="assets/imgs/switch2ropsten.png">
+      </a>
+    </div>
+
+    <div class="container" *ngSwitchCase="'wallet'">
+      <div ion-text color="light" padding>
+        <h1>Opps! we didn't find a wallet installed,</h1>
+        <h3>Please install MetaMask extension and try again.</h3>
+      </div>
+      <a padding button href="https://metamask.io/" clear>
+        <img width="400" src="assets/imgs/download-metamask.png">
+      </a>
+    </div>
+
+  </div>
+
+</ion-content>

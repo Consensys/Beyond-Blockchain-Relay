@@ -1,0 +1,48 @@
+<!--
+  Generated template for the MakeSeattlePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <deben-header>Seattle</deben-header>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list style="margin: 0 auto; max-width: 450px;">
+
+    <button ion-button block color='dark' icon-end (click)="openScannerModal()">
+      Scan QR code
+      <ion-icon name="barcode"></ion-icon>
+    </button>
+
+    <form *ngIf="qrForm" [formGroup]="qrForm" (ngSubmit)="onSubmit()">
+
+      <ion-item no-lines *ngIf="qrForm.value.address">
+        <ion-avatar>
+          <account-icon account="{{qrForm.value.address}}"></account-icon>
+        </ion-avatar>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>
+          Seller Address
+        </ion-label>
+        <ion-input type="text" formControlName="address" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Amount in EGP</ion-label>
+        <ion-input type="number" formControlName="amount" required></ion-input>
+      </ion-item>
+
+      <div padding></div>
+
+      <button float-right ion-button block type="submit">Submit</button>
+
+    </form>
+
+  </ion-list>
+
+</ion-content>
