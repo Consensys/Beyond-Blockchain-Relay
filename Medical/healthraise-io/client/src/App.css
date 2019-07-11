@@ -1,0 +1,157 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.nav {
+  padding: 2.5%;
+  background-color: #f6f6f6;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-menu ul {
+  list-style-type: none;
+  padding-left: 20px;
+  margin-top: 30px;
+}
+
+.nav-menu li {
+  border-top: 1px #ded6d9 solid;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #048998;
+}
+
+.nav-user {
+  border-top: #ded6d9 solid 1px;
+  padding-top: 20px;
+}
+
+
+.button {
+  text-decoration: none;
+  color: #fff;
+  background-color: #3bb4c1;
+  display: flex;
+  flex:1;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.button-sponsor {
+  text-decoration: none;
+  color: #fff;
+  background-color: #3bb4c1;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  text-align: center;
+  justify-content: space-around;
+  width: 100px;
+  border-radius: 2.5px;
+}
+
+.menu-settings-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 5px;
+  border-left: 1px #000 solid;
+  padding-left: 5px;
+}
+
+.content {
+  background-color: #fff;
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+  overflow: auto;
+}
+
+.tile {
+  border-bottom: #f6f6f6 solid 0.5px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.profile .tile-profile {
+  width: 150px;
+  margin: auto;
+}
+
+.tile-profile, .tile-description {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.tile-profile-icon {
+  width: 150px;
+  height: 150px;
+  border-radius: 100px;
+  background-color: #f6f6f6;
+}
+
+.tile-votes {
+  margin-top: 20px;
+}
+
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid #f6f6f6;
+  margin: auto;
+}
+
+.votes {
+  background-color: #f6f6f6;
+  height: 30px;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 15px;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.votes, .votes a {
+  color: #3bb4c1;
+  text-decoration: none;
+}
+
+.tile-header {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.tile-header-raised {
+  margin-left: 20px;
+  color: #048998;
+  border: 1px solid #048998;
+  padding: 5px;
+  border-radius: 2.5px;
+}
