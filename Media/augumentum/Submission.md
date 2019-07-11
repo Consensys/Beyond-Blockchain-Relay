@@ -16,4 +16,5 @@ Augumentum solve problem with finding arguments and verifying them. Augumentum i
 
 ## Link to Ancillary Material
 
+- **Whitepaper:** https://github.com/xVETTEx/Beyond-Blockchain-Relay/blob/master/Media/augumentum/Whitepaper.md
 - **UI designs:** https://www.figma.com/proto/MeSlJtyGAbpk1QucXddaarxD/Augumentum?node-id=27%3A2&scaling=min-zoom
