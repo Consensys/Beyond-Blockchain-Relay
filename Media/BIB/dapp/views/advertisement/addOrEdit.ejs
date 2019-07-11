@@ -1,0 +1,35 @@
+<% include ../partials/navbar %>
+
+<div class="container">
+  <h3><%= viewTitle %></h3>
+
+  <form action="/advertisement/add" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="<%= advertisement._id %>" />
+    <div class="form-group">
+      <label>Filename</label>
+      <input
+        type="text"
+        class="form-control"
+        name="filename"
+        placeholder="Full Name"
+        value="<%= advertisement.fullName %>"
+      />
+    </div>
+    <div class="form-group">
+      <label>Type</label>
+      <input
+        type="text"
+        class="form-control"
+        name="type"
+        placeholder="Type"
+        value="<%= advertisement.type %>"
+      />
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-info">
+        <i class="fa fa-database"></i> Submit
+      </button>
+    </div>
+  </form>
+</div>
