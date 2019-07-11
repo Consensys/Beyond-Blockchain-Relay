@@ -1,0 +1,16 @@
+<div fxLayout="row" >
+  <div fxFlex="10" fxFlex.gt-sm="20"></div>
+  <div fxFlex="90" fxFlex.gt-sm="80">
+    <!-- <app-add-article> </app-add-article> -->
+    <h1 class="header__title" >Recent News</h1>
+    <div id="article-list" *ngIf="data; else loading">
+      <ng-container *ngFor="let article of data">
+        <app-article-card [article]="article"></app-article-card>
+      </ng-container>
+    </div>
+    <ng-template #loading>
+      <app-article-loading></app-article-loading>
+    </ng-template>
+  </div>
+  <div fxFlex="10" fxFlex.gt-sm="20"></div>
+</div>
