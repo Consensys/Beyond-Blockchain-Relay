@@ -13,8 +13,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x5aa6e675"
+      "type": "function"
     },
     {
       "constant": true,
@@ -33,8 +32,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0x9a98ce27"
+      "type": "function"
     },
     {
       "constant": false,
@@ -48,8 +46,7 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x101c9237"
+      "type": "function"
     },
     {
       "constant": false,
@@ -63,8 +60,7 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x0a3b0a4f"
+      "type": "function"
     },
     {
       "constant": false,
@@ -78,8 +74,7 @@
       "outputs": [],
       "payable": false,
       "stateMutability": "nonpayable",
-      "type": "function",
-      "signature": "0x29092d0e"
+      "type": "function"
     },
     {
       "constant": true,
@@ -98,8 +93,7 @@
       ],
       "payable": false,
       "stateMutability": "view",
-      "type": "function",
-      "signature": "0xf72c436f"
+      "type": "function"
     }
   ],
   "bytecode": "0x608060405234801561001057600080fd5b506104cb806100206000396000f3fe6080604052600436106100775763ffffffff7c01000000000000000000000000000000000000000000000000000000006000350416630a3b0a4f811461007c578063101c9237146100b157806329092d0e146100e45780635aa6e675146101175780639a98ce2714610148578063f72c436f1461018f575b600080fd5b34801561008857600080fd5b506100af6004803603602081101561009f57600080fd5b5035600160a060020a03166101c2565b005b3480156100bd57600080fd5b506100af600480360360208110156100d457600080fd5b5035600160a060020a0316610333565b3480156100f057600080fd5b506100af6004803603602081101561010757600080fd5b5035600160a060020a0316610362565b34801561012357600080fd5b5061012c61045d565b60408051600160a060020a039092168252519081900360200190f35b34801561015457600080fd5b5061017b6004803603602081101561016b57600080fd5b5035600160a060020a031661046c565b604080519115158252519081900360200190f35b34801561019b57600080fd5b5061017b600480360360208110156101b257600080fd5b5035600160a060020a0316610481565b600154600160a060020a0316331461026157604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152603a60248201527f48756d616e69747952656769737472793a3a6164643a204f6e6c7920676f766560448201527f726e616e63652063616e2061646420616e206964656e74697479000000000000606482015290519081900360840190fd5b600160a060020a03811660009081526020819052604090205460ff161561030f57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152603960248201527f48756d616e69747952656769737472793a3a6164643a2041646472657373206960448201527f7320616c7265616479206f6e2074686520726567697374727900000000000000606482015290519081900360840190fd5b600160a060020a03166000908152602081905260409020805460ff19166001179055565b6001805473ffffffffffffffffffffffffffffffffffffffff1916600160a060020a0392909216919091179055565b600154600160a060020a0316331480610383575033600160a060020a038216145b151561043c57604080517f08c379a000000000000000000000000000000000000000000000000000000000815260206004820152605660248201527f48756d616e69747952656769737472793a3a72656d6f76653a204f6e6c79206760448201527f6f7665726e616e6365206f7220746865206964656e74697479206f776e65722060648201527f63616e2072656d6f766520616e206964656e7469747900000000000000000000608482015290519081900360a40190fd5b600160a060020a03166000908152602081905260409020805460ff19169055565b600154600160a060020a031681565b60006020819052908152604090205460ff1681565b600160a060020a031660009081526020819052604090205460ff169056fea165627a7a72305820255f9a6a4f50a1511182a067902a6aede506710de6109f8e8b27e057389f5aff0029",
@@ -111,20 +105,14 @@
   "ast": {
     "absolutePath": "/media/eman-herawy/06a83b1f-0bf4-4872-8ba9-a878bd1ab3251/home/eherrawy/LocalD/work/gitcoin/true-news/NewsLimited/contract-with-truffle/contracts/HumanityRegistry.sol",
     "exportedSymbols": {
-      "HumanityRegistry": [
-        83
-      ]
+      "HumanityRegistry": [83]
     },
     "id": 84,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "0.5",
-          ".0"
-        ],
+        "literals": ["solidity", "0.5", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:22:0"
       },
@@ -135,9 +123,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 83,
-        "linearizedBaseContracts": [
-          83
-        ],
+        "linearizedBaseContracts": [83],
         "name": "HumanityRegistry",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -349,7 +335,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1005,
+                            "referencedDeclaration": 1048,
                             "src": "324:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -424,11 +410,8 @@
                       "id": 22,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1008,
-                        1009
-                      ],
-                      "referencedDeclaration": 1009,
+                      "overloadedDeclarations": [1051, 1052],
+                      "referencedDeclaration": 1052,
                       "src": "316:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -567,11 +550,8 @@
                       "id": 30,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1008,
-                        1009
-                      ],
-                      "referencedDeclaration": 1009,
+                      "overloadedDeclarations": [1051, 1052],
+                      "referencedDeclaration": 1052,
                       "src": "421:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -769,7 +749,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1005,
+                              "referencedDeclaration": 1048,
                               "src": "619:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -832,7 +812,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1005,
+                              "referencedDeclaration": 1048,
                               "src": "647:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -913,11 +893,8 @@
                       "id": 51,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1008,
-                        1009
-                      ],
-                      "referencedDeclaration": 1009,
+                      "overloadedDeclarations": [1051, 1052],
+                      "referencedDeclaration": 1052,
                       "src": "598:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1202,20 +1179,14 @@
   "legacyAST": {
     "absolutePath": "/media/eman-herawy/06a83b1f-0bf4-4872-8ba9-a878bd1ab3251/home/eherrawy/LocalD/work/gitcoin/true-news/NewsLimited/contract-with-truffle/contracts/HumanityRegistry.sol",
     "exportedSymbols": {
-      "HumanityRegistry": [
-        83
-      ]
+      "HumanityRegistry": [83]
     },
     "id": 84,
     "nodeType": "SourceUnit",
     "nodes": [
       {
         "id": 1,
-        "literals": [
-          "solidity",
-          "0.5",
-          ".0"
-        ],
+        "literals": ["solidity", "0.5", ".0"],
         "nodeType": "PragmaDirective",
         "src": "0:22:0"
       },
@@ -1226,9 +1197,7 @@
         "documentation": null,
         "fullyImplemented": true,
         "id": 83,
-        "linearizedBaseContracts": [
-          83
-        ],
+        "linearizedBaseContracts": [83],
         "name": "HumanityRegistry",
         "nodeType": "ContractDefinition",
         "nodes": [
@@ -1440,7 +1409,7 @@
                             "name": "msg",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 1005,
+                            "referencedDeclaration": 1048,
                             "src": "324:3:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_magic_message",
@@ -1515,11 +1484,8 @@
                       "id": 22,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1008,
-                        1009
-                      ],
-                      "referencedDeclaration": 1009,
+                      "overloadedDeclarations": [1051, 1052],
+                      "referencedDeclaration": 1052,
                       "src": "316:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1658,11 +1624,8 @@
                       "id": 30,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1008,
-                        1009
-                      ],
-                      "referencedDeclaration": 1009,
+                      "overloadedDeclarations": [1051, 1052],
+                      "referencedDeclaration": 1052,
                       "src": "421:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -1860,7 +1823,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1005,
+                              "referencedDeclaration": 1048,
                               "src": "619:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -1923,7 +1886,7 @@
                               "name": "msg",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 1005,
+                              "referencedDeclaration": 1048,
                               "src": "647:3:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_magic_message",
@@ -2004,11 +1967,8 @@
                       "id": 51,
                       "name": "require",
                       "nodeType": "Identifier",
-                      "overloadedDeclarations": [
-                        1008,
-                        1009
-                      ],
-                      "referencedDeclaration": 1009,
+                      "overloadedDeclarations": [1051, 1052],
+                      "referencedDeclaration": 1052,
                       "src": "598:7:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
@@ -2295,15 +2255,15 @@
     "version": "0.5.0+commit.1d4f565a.Linux.g++"
   },
   "networks": {
-    "1562796104918": {
+    "3": {
       "events": {},
       "links": {},
-      "address": "0x40c7CD1020a177a514e0009b6989C14a69A6d192",
-      "transactionHash": "0xf5eb880da8f57dc367dded7b08071a2543ff5a63422fac90f43a9bea4218fdc7"
+      "address": "0x8D9bA8F703d3b0a6e71D3950464d3541Cfb47Ff1",
+      "transactionHash": "0xeed43d1fc2182454926872ee5ec1a4a618cad26b965e252515bfcc70b1377011"
     }
   },
   "schemaVersion": "3.0.0",
-  "updatedAt": "2019-07-10T22:06:50.029Z",
+  "updatedAt": "2019-07-11T01:53:04.101Z",
   "devdoc": {
     "methods": {}
   },

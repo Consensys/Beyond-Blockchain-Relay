@@ -8,7 +8,13 @@ contract NewsLimited {
     event rumor(address x, string w);
     HumanityRegistry public registry;
     Ifox public news;
-    
+    uint256 public rumorsCount;
+    		struct rumorData{ 
+		string url;
+		address sender;
+	}
+    	mapping (uint256 => rumorData) usersRoumors;
+
     function initplz(HumanityRegistry _registry, Ifox _news) public {
         registry = _registry;
         news = _news;
@@ -18,9 +24,13 @@ contract NewsLimited {
         require(registry.isHuman(msg.sender), "journalist only");
         
         emit rumor(msg.sender, _weblink);
-        
+        rumorsCount++;
+	 	 rumorData memory newRumor;
+            usersRoumors[rumorsCount]=newRumor;
     } 
-    
+    	function getRumor(uint256 count)public view returns (address ,string memory) {
+		return (usersRoumors[count].sender,usersRoumors[count].url);
+	}
     function reward(address jor) internal {
     uint totalSupply = news.totalSupply();
         
