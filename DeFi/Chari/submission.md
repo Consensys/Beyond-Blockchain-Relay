@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Chari: Donation Matching on Ethereum
+Chari: a match made in crypto
 
 ## Project Summary
 
@@ -21,17 +21,17 @@ Donors can contribute until expiration (also with a simple transfer, no dApp bro
 
 ## Project Team
 
-* Julia Ero <ejulcsi@gmail.com>, contact: ok
-* Daniel Fogaras <daniel.fogaras@gmail.com>, contact: ok
+* Júlia Erő <ejulcsi@gmail.com>, contact: ok
+* Dániel Fogaras <daniel.fogaras@gmail.com>, contact: ok
 * Brigitta Forrai <forraibrigi@gmail.com>, contact: ok
-* Robert Szaloki <r.szaloki@gmail.com>, contact: ok
-* Viktor Szathmary <phraktle@gmail.com>, contact: ok
-* Zoltan Treer <ztreer@gmail.com>, contact: nope
+* Róbert Szalóki <r.szaloki@gmail.com>, contact: ok
+* Viktor Szathmáry <phraktle@gmail.com>, contact: ok
+* Zoltán Treer <ztreer@gmail.com>, contact: nope
 * Krystian Zun <krystian.zun@gmail.com>, contact: ok
 
 ## Project Advisor(s)
 
-* Reka Berczeledi, HospiSchool
+* Réka Berczelédi, HospiSchool
 
 
 ## Link to Ancillary Material
