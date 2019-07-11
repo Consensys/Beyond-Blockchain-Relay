@@ -1,3 +1,6 @@
 [submodule "DeFi/DeFi/Providentia/code/providentia"]
 	path = DeFi/DeFi/Providentia/code/providentia
 	url = https://github.com/ugolino/providentia
+[submodule "DeFi/Chari/chari"]
+	path = DeFi/Chari/chari
+	url = https://github.com/DecentLabs/chari
