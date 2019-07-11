@@ -39,8 +39,30 @@ $.getJSON("https://etherscamdb.info/api/addresses/", function(response) {
       var transactions = data.data;
       console.log("Got user's transactions", transactions);
 
+      $.getJSON("https://api.aleth.io/v1/blocks", function( data ) {
+        var block = data.meta.latestBlock.number;
+        $('#other').append("<h2>Latest Block:</h2><h3>"+block+"</h3>");
+      });
+
+      $.getJSON("https://api.aleth.io/v1/accounts/" + address + "/tokenTransfers", function( data2 ) {
+        var tokens = data2.data;
+        tokens.forEach(function(tkn) {
+          console.log(tkn);
+          var to = tkn.relationships.to.data.id;
+          var from = tkn.relationships.from.data.id;
+          var otherWallet;
+          if(to == address) otherWallet = from;
+          else if(from == address) otherWallet = to;
+
+          // Add to UI
+          $('#tokens').append('<tr><td><a target="_blank" href="https://etherscan.io/tx/'+tkn.id+'">'+tkn.id.slice(0,15)+'</a></td><td>'+tkn.relationships.from.data.id.slice(0,15)+'</td><td>'+tkn.relationships.to.data.id.slice(0,15)+'</td><td>'+(tkn.attributes.value / Math.pow(10, tkn.attributes.decimals)) + ' ' + tkn.attributes.symbol + '</td></tr>');
+        });
+
+      });
+
       // Figure out who was the other address involved in each transaction:
-      transactions.every((txn) => {
+      //transactions.every((txn) => {
+      transactions.forEach(function(txn) {
         var to = txn.relationships.to.data.id;
         var from = txn.relationships.from.data.id;
         var otherWallet;
@@ -48,7 +70,7 @@ $.getJSON("https://etherscamdb.info/api/addresses/", function(response) {
         else if(from == address) otherWallet = to;
 
         // Add to UI
-        $('#transactions').append('<div>'+JSON.stringify(txn)+'</div>');
+        $('#transactions').append('<tr><td><a target="_blank" href="https://etherscan.io/tx/'+txn.id+'">'+txn.id.slice(0,15)+'</a></td><td>'+txn.relationships.from.data.id.slice(0,15)+'</td><td>'+txn.relationships.to.data.id.slice(0,15)+'</td><td>'+(txn.attributes.value / 10e17)+' ETH</td></tr>');
 
         // Check if the other person is in our list of scam addresses:
         if(otherWallet) {
@@ -72,7 +94,7 @@ $.getJSON("https://etherscamdb.info/api/addresses/", function(response) {
       // Fetch specified address' ETH balance:
       $.getJSON("https://api.aleth.io/v1/accounts/" + address, function(response) {
         var balance = response.data.attributes.balance / 10e17;
-        console.log("Got user's ETH balance", balance);
+        console.log("Got user's ETH balance", balance, response);
         $('#balance').html(balance.toFixed(5) + " ETH");
       });
 
