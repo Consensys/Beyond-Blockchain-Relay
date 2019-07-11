@@ -1,0 +1,11 @@
+.timer-wrapper {
+  text-align: left;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.timer-text {
+  @extend %big-text;
+  font-weight: 600;
+}

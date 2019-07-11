@@ -1,0 +1,314 @@
+.dashboard-wrapper {
+    background-color: $offwhite;
+    margin-bottom: $bigsize;
+    min-height: 1200px;
+    
+    //background: linear-gradient(to bottom, $emerald 0%, $emerald 25%, $emerald 25%, $turquoise 40%, $offwhite 40%, $offwhite 100%); /* W3C */
+}
+
+.dashboard-body-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+.dashboard-body-wrapper::before {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    height: 300px;
+    width: 100%;
+    background-image: -webkit-linear-gradient($dashboardgradient);
+    background-image: linear-gradient($dashboardgradient);
+}
+
+.dashboard-title-text {
+    color: $offwhite;
+    z-index: 1;
+    position: relative;
+    margin: $titlesize auto;
+}
+
+.earnings-text {
+    color: $emerald;
+}
+
+%dashboard-data-unit {
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+    z-index: 1;
+    background-color: $white;
+    border: $dashboarditemborder;
+    box-shadow: $alternate-box-shadow;
+}
+
+%center-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dashboard-data-unit-caption {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// EARNINGS PAGE ====================================
+
+.dashboard-earnings-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px 250px;
+    grid-gap: 30px;
+    z-index: 1;
+    position: relative;
+    //align-items: stretch;
+
+    margin: $titlesize auto;
+    max-height: 750px;
+}
+
+.dashboard-earnings-grid .dashboard-hero-graph-wrapper {
+    @extend %small-text;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+    //height: 100%;
+    width: 100%;
+    //max-width: 700px;
+    //padding-top: $bigsize;
+    background-color: $white;
+    border: $dashboarditemborder;
+    box-shadow: $alternate-box-shadow;
+    
+}
+
+.dashboard-hero-graph-wrapper .caption-text,
+.dashboard-interest-graph-wrapper .caption-text {
+    margin-right: 0;
+}
+
+.dashboard-earnings-grid .dashboard-earnings-data-unit {
+    @extend %dashboard-data-unit;
+    @extend %center-unit;
+    justify-content: space-between;
+}
+
+.dashboard-earnings-data-unit h1,
+.dashboard-earnings-data-unit h2,
+.dashboard-earnings-data-unit p {
+    margin: 0 auto;
+}
+
+.dashboard-earnings-grid .caption-text {
+    margin: $bigsize 0 $smallsize;
+}
+
+.dashboard-earnings-grid .dashboard-data-unit-content {
+    padding-bottom: $titlesize * 3;
+}
+
+.dashboard-earnings-grid .small-text {
+    margin: 0 $titlesize;
+}
+
+.dashboard-earnings-grid .average-interest-rates-data-unit {
+    grid-column: 0 / span 1;
+    grid-row: 3 / span 1;
+}
+
+.dashboard-earnings-grid .dashboard-interest-graph-wrapper {
+    grid-column: 2 / span 2;
+    grid-row: 3 / span 1;
+    //height: 100%;
+    width: 100%;
+    //max-width: 700px;
+    //padding-top: $bigsize;
+    background-color: $white;
+    border: $dashboarditemborder;
+    box-shadow: $alternate-box-shadow;
+
+    @extend %small-text;
+}
+
+.dashboard-interest-graph-wrapper .recharts-label-list tspan {
+    color: $lightgrey !important;
+    font-style: italic;
+    font-size: $smallsize / 1.25;
+}
+
+// ==========================================
+
+
+.dashboard-graph-button-group .dropdown-toggle {
+    display: none;
+}
+ 
+.dashboard-graph-button-dropdown {
+    display: inline;
+    background: transparent;
+    box-shadow:none;
+    border:none;
+    position: relative;
+    margin:0;
+}
+
+.dashboard-graph-button-group input,
+.dashboard-graph-button-group label {
+    display: none;
+}
+
+.dashboard-graph-button-dropdown li {
+    display: inline;
+}
+
+// Bigger screen buttons taken care of in .button--buttongroup
+
+@media (max-width: 700px) {
+
+
+	/* Hide the navigation menu by default */
+	/* Also hide the  */
+	.dropdown-toggle + a,
+	.menu {
+		display: none;
+	}
+
+	// The toggle dropdown
+	.dashboard-graph-button-group .dropdown-toggle {
+        @include small-text--bold();
+        display: block;
+        padding: 4px 8px;
+        margin: 0 $mediumsize;
+        text-align: center;
+        border-radius: $borderradius / 2;
+        color: $offwhite;
+        background-color: $darkgrey;
+        transition: all .2s ease-in-out;
+	}
+
+	
+    
+    .dashboard-graph-button-dropdown {
+        display: none;
+    }
+
+   .dashboard-interest-graph-wrapper {
+       overflow: auto;
+   }
+
+	// Display dropdown when toggle is clicked
+	[id^=drop]:checked + .dashboard-graph-button-dropdown {
+        display: block;
+    }
+
+    // The buttons, on mobile screens
+    [id^=drop]:checked + .dashboard-graph-button-dropdown li a {
+        width: 75%;
+        text-align: center;
+        border-top: 0.5px solid $offblack;
+        border-bottom: 0.5px solid $offblack;
+        background-color: $offwhite;
+        color: $darkgrey;
+        //display: block;
+	}
+}
+
+.graph-yaxis-label {
+    margin-right: $mediumsize;
+}
+  
+
+
+// MANAGE PAGE ====================================
+
+.dashboard-manage-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 30px;
+    z-index: 1;
+    position: relative;
+}
+
+.dashboard-manage-grid .manage-grid-top-row {
+    @extend %dashboard-data-unit;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 1;
+}
+
+.dashboard-manage-grid .manage-grid-deposit {
+    @extend %dashboard-data-unit;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+
+    @extend %center-unit;
+    padding-bottom: $bigsize;
+}
+
+.dashboard-manage-grid .manage-grid-withdraw {
+    @extend %dashboard-data-unit;
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+
+    @extend %center-unit;
+    padding-bottom: $bigsize;
+}
+
+.dashboard-manage-grid .caption-text {
+    margin: $bigsize 0 $smallsize;
+}
+
+.dashboard-manage-grid .big-text--bold {
+    margin-top: $titlesize;
+}
+
+.dashboard-manage-grid .medium-text {
+    margin: 0 $titlesize $bigsize;
+}
+
+// HISTORY PAGE ====================================
+
+.dashboard-history-table-wrapper {
+    z-index: 1;
+    position: relative;
+    // background-color: $offwhite;
+    
+    @extend %medium-text;
+    @extend %dashboard-data-unit;
+    padding: $titlesize;
+    margin-bottom: $titlesize * 2;
+}
+
+
+.griddle-table {
+    margin-top: $titlesize;
+    border-collapse: collapse;
+    width: 100%;
+    outline: none;
+}
+.griddle-table-heading-cell {
+    color: $offblack;
+    @extend %caption-text;
+}
+
+.griddle-noResults {
+    @extend %big-text;
+    color: $livingcoral;
+    font-weight: 800;
+}
+
+td {
+    
+  padding: $bigsize
+  
+}

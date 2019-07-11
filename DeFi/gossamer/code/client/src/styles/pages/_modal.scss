@@ -1,0 +1,25 @@
+//The modal from Step 6 Set Address
+
+.supply-modal-wrapper {
+    text-align: center;
+    padding: 0 $titlesize $titlesize;
+    margin-top: 0;
+}
+
+.supply-modal-wrapper button {
+  margin-top: $smallsize;
+  margin-bottom: $mediumsize;
+}
+
+.supply-modal-infographic {
+  width: 700px;
+  height: 400px;
+  background-color: $emerald;
+}
+
+.rodal-close {
+    &::before, &::after {
+      display: none;
+    }
+    background: url("https://dapp-lending.s3-us-west-1.amazonaws.com/icons/cancel-music.svg");
+  }

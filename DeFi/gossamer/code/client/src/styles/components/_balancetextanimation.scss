@@ -1,0 +1,11 @@
+// Dashboard Balance Text on Earnings Tab, animation
+
+.dashboard-balance-text--green {
+  color: $emerald;
+  transition: color 1s ease-out; 
+}
+
+.dashboard-balance-text--black {
+  color: $offblack;
+  transition: color 1s ease-out;
+}

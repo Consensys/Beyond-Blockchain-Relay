@@ -1,0 +1,22 @@
+
+.landing-page-wrapper {
+    font-family: 'Archivo', sans-serif;
+}
+.hero-login-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+}
+.hero-wrapper {
+
+}
+
+.login-wrapper {
+    // margin-right: $titlesize * 2;
+    margin-left: $titlesize;
+}
+
+.landing-page-input {
+    margin-top: $bigsize;
+    margin-bottom: $bigsize;
+    margin-left: 0;
+}

@@ -1,0 +1,64 @@
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.left-align-content-wrap {
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.left-text-align {
+	text-align: left;
+}
+
+.left-margin {
+	margin-left: $titlesize;
+}
+
+.horizontal-tight-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.vertical-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.width-80 {
+	width: 80%;
+}
+
+.hide {
+	display: none;
+	transition: display 1s ease-out; 
+}
+
+.top-margin {
+	margin-top: $titlesize;
+}
+
+.bottom-margin {
+	margin-bottom: $titlesize;
+}
+
+.center-image-wrapper {
+	text-align: center;
+}
+
+.red {
+	color: red;
+}
+
+li.small-text {
+	padding-bottom: 5px;
+}
+
+.ethereum-address-input-modifier {
+	width: 35%;
+}

@@ -1,0 +1,256 @@
+// Variables
+$bar-color: $emerald;
+$ball-color: $emerald;
+$bg-color: $offwhite;
+
+.loading-animation-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: $offwhite;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+// The box with the bars
+.loading-animation-container {
+  margin-bottom: $titlesize * 3;
+  margin-left: $titlesize * 1.5;
+  background: $bg-color;
+  position: relative;
+  width: 100px;
+  height: 65px;
+}
+
+.loading-animation-container-small {
+  margin-bottom: $titlesize * 3;
+  margin-left: $titlesize * 1.5;
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  height: 65px;
+}
+  
+// the actual bars
+.loading-bar {
+  position: absolute;
+  bottom: 0;
+  width: 10px;
+  height: 100%;
+  background: $bar-color;
+  transform-origin: center bottom;
+  box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+  
+  &:before {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    height: 100%;
+    width: 10px;
+    background: rgba(0,0,0,0.15);
+  
+  }
+  
+  @for $i from 1 through 5 { 
+    &:nth-child(#{$i}) {
+        left: ($i - 1) * 15px;
+        transform: scale(1,$i*.2);
+        animation: barUp#{$i} 4s infinite;
+
+    }
+  }
+  
+}
+
+// the bouncing ball
+.loading-ball {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background: $ball-color;
+  border-radius: 50%;
+  animation: ball 4s infinite;
+}
+
+@keyframes ball {
+  0% {
+    transform: translate(0, 0);
+  }
+  5% {
+    transform: translate(8px, -22px);
+  }
+  10% {
+    transform: translate(15px, -16px)
+  }
+  17% {
+    transform: translate(23px, -34px)
+  }
+  20% {
+    transform: translate(30px, -28px)
+  }
+  27% {
+    transform: translate(38px, -46px)
+  }
+  30% {
+    transform: translate(45px, -42px)
+  }
+  37% {
+    transform: translate(53px, -80px)
+  }
+  40% {
+    transform: translate(60px, -54px)
+  }
+  50% {
+    transform: translate(60px, 0)
+  }
+  57% {
+    transform: translate(53px, -22px)
+  }
+  60% {
+    transform: translate(45px, -16px)
+  }
+  67% {
+    transform: translate(37px, -34px)
+  }
+  70% {
+    transform: translate(30px, -28px)
+  }
+  77% {
+    transform: translate(22px, -46px)
+  }
+  80% {
+    transform: translate(15px, -42px)
+  }
+  87% {
+    transform: translate(7px, -80px)
+  }
+  90% {
+    transform: translate(0, -54px)
+  }
+  100% {
+    transform: translate(0, 6px);
+  }
+}
+
+@keyframes barUp1 { 
+  0% {
+    transform: scale(1, .2);
+  }
+  40%{
+    transform: scale(1, .2);
+  }
+  50% {
+    transform: scale(1, 1);
+  }
+  90% {
+    transform: scale(1,1);
+  }
+  100% {
+    transform: scale(1,.2);
+  }
+}
+@keyframes barUp2 { 
+  0% {
+    transform: scale(1, .4);
+  }
+  38% {
+    transform: scale(1, .4);
+  }
+  48% {
+    transform: scale(1, .8);
+  }
+  90% {
+    transform: scale(1, .8);
+  }
+  100% {
+    transform: scale(1, .4);
+  }
+}
+@keyframes barUp3 { 
+  0% {
+    transform: scale(1, .6);
+  }
+  100% {
+    transform: scale(1, .6);
+  }
+}
+@keyframes barUp4 { 
+  0% {
+    transform: scale(1, .8);
+  }
+  40% {
+    transform: scale(1, .8);
+  }
+  50% {
+    transform: scale(1, .4);
+  }
+  90% {
+    transform: scale(1, .4);
+  }
+  100% {
+    transform: scale(1, .8);
+  }
+}
+@keyframes barUp5 { 
+  0% {
+    transform: scale(1, 1);
+  }
+  40% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1, .2);
+  }
+  90% {
+    transform: scale(1, .2);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+// the loading text
+.loading-animation-wrapper .loading-text {
+  color: $darkgrey;
+  margin-right: -40px;
+}
+
+// the animating periods ...
+// another one that was just annoying bc of the size https://codepen.io/thetallweeks/pen/yybGra
+
+
+.loading-ellipsis span {
+  opacity: 0;
+  -webkit-animation: ellipsis-dot 2s infinite;
+  animation: ellipsis-dot 2s infinite;
+}
+
+.loading-ellipsis span:nth-child(1) {
+  -webkit-animation-delay: 0.0s;
+  animation-delay: 0.0s;
+}
+.loading-ellipsis span:nth-child(2) {
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+.loading-ellipsis span:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+@-webkit-keyframes ellipsis-dot {
+    0% { opacity: 0; }
+   50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes ellipsis-dot {
+    0% { opacity: 0; }
+   50% { opacity: 1; }
+  100% { opacity: 0; }
+}
