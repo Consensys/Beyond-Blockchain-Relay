@@ -1,0 +1,26 @@
+{
+  "name": "wrapped-coffee-coin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "openzeppelin-solidity": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crisgarner/wrapped-coffee-coin.git"
+  },
+  "author": "@crisgarner, @isaacmtz90",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crisgarner/wrapped-coffee-coin/issues"
+  },
+  "homepage": "https://github.com/crisgarner/wrapped-coffee-coin#readme"
+}
