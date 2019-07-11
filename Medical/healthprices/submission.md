@@ -40,7 +40,7 @@ List each team member, along with the below fields
 ## Link to Ancillary Material
 If some of your material cannot be uploaded to GitHub (ie. Google Slides, a pitch on Youtube, a metrics dashboard on BareMetrics), list it here!
 
-- **Video:** Coming Soon
+- **Video:** [https://www.youtube.com/watch?v=sXgIaxVgB1g](https://www.youtube.com/watch?v=sXgIaxVgB1g)
 - **Demo URL:** [https://healthprices.net](https://healthprices.net)
 
 **Other Resources (In This Repo):**

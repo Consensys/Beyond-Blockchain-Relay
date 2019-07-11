@@ -1,78 +1,152 @@
-/**
- * ---------------------------------------
- * This demo was created using amCharts 4.
- *
- * For more information visit:
- * https://www.amcharts.com/
- *
- * Documentation is available at:
- * https://www.amcharts.com/docs/v4/
- * ---------------------------------------
- */
+// HealthPrice's Ropsten Smart Contract: 0xe7d3ae72d55edf4b7d3e3b6cae523b317cdea0df
 
-am4core.useTheme(am4themes_animated);
+let account;
+var contractInstance;
+var abi = [];
+var countries = ["US", "CR", "CO", "IN", "JO", "KR", "MX", "IL", "TH", "MY", "PL", "SG", "TR"]; // Todo: Add more regions
 
-var chart = am4core.create("chartdiv", am4maps.MapChart);
-chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
-
-chart.geodata = am4geodata_worldLow;
-chart.projection = new am4maps.projections.Miller();
-
-var title = chart.chartContainer.createChild(am4core.Label);
-title.text = "Life expectancy in the World";
-title.fontSize = 20;
-title.paddingTop = 30;
-title.align = "center";
-title.zIndex = 100;
-
-var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
-var polygonTemplate = polygonSeries.mapPolygons.template;
-polygonTemplate.tooltipText = "{name}: {value.value.formatNumber('#.0')}";
-polygonSeries.heatRules.push({
-  property: "fill",
-  target: polygonSeries.mapPolygons.template,
-  min: am4core.color("#ffffff"),
-  max: am4core.color("#cc2929")
-});
-polygonSeries.useGeodata = true;
-
-// add heat legend
-var heatLegend = chart.chartContainer.createChild(am4maps.HeatLegend);
-heatLegend.valign = "bottom";
-heatLegend.align = "left";
-heatLegend.width = am4core.percent(100);
-heatLegend.series = polygonSeries;
-heatLegend.orientation = "horizontal";
-heatLegend.padding(20, 20, 20, 20);
-heatLegend.valueAxis.renderer.labels.template.fontSize = 10;
-heatLegend.valueAxis.renderer.minGridDistance = 40;
-
-polygonSeries.mapPolygons.template.events.on("over", event => {
-  handleHover(event.target);
-});
-
-polygonSeries.mapPolygons.template.events.on("hit", event => {
-  handleHover(event.target);
-});
-
-function handleHover(mapPolygon) {
-  if (!isNaN(mapPolygon.dataItem.value)) {
-    heatLegend.valueAxis.showTooltipAt(mapPolygon.dataItem.value);
-  } else {
-    heatLegend.valueAxis.hideTooltip();
+// --- INITIALIZE WEB3.JS ---
+async function connectAccount() {
+  // Modern dapp browsers...
+  if (window.ethereum) {
+      window.web3 = new Web3(ethereum);
+      try {
+          // Request account access if needed
+          await ethereum.enable();
+          // Acccounts now exposed
+          web3.eth.getAccounts(function(err, accounts){
+            account = accounts[0];
+            console.log("GOT ACCOUNT: ", account);
+          });
+      } catch (error) {
+          // User denied account access...
+      }
+  }
+  // Legacy dapp browsers...
+  else if (window.web3) {
+      window.web3 = new Web3(web3.currentProvider);
+      // Acccounts always exposed
+      web3.eth.getAccounts(function(err, accounts){
+        account = accounts[0];
+        console.log("GOT ACCOUNT: ", account);
+      });
+  }
+  // Non-dapp browsers...
+  else {
+      console.log('Non-Ethereum browser detected. You should consider trying MetaMask! Connecting to Infura...');
+      window.web3 = new Web3(new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/77264244428d46c7878f4d7773c85f78"));
   }
 }
 
-polygonSeries.mapPolygons.template.strokeOpacity = 0.4;
-polygonSeries.mapPolygons.template.events.on("out", event => {
-  heatLegend.valueAxis.hideTooltip();
+window.addEventListener('load', async () => {
+    connectAccount();
+    abi = [ { "constant": false, "inputs": [ { "name": "region", "type": "string" }, { "name": "procedure", "type": "string" }, { "name": "_cost", "type": "uint256" } ], "name": "submitCost", "outputs": [], "payable": false, "stateMutability": "nonpayable", "type": "function" }, { "constant": true, "inputs": [ { "name": "region", "type": "string" }, { "name": "procedure", "type": "string" } ], "name": "getAverage", "outputs": [ { "name": "avg", "type": "uint256" } ], "payable": false, "stateMutability": "view", "type": "function" } ];
+    //contractInstance = new web3.eth.Contract(abi,'0x0ef28ba1d77a6613e196949853407ded602c1a7f'); // MAINNET
+    contractInstance = new web3.eth.Contract(abi,'0xe7d3ae72d55edf4b7d3e3b6cae523b317cdea0df'); // ROPSTEN'
+    console.log("Connected to 0xe7d3ae72d55edf4b7d3e3b6cae523b317cdea0df on Ropsten Testnet");
+
+    //////////////////////////////////////////////////////
+    // Chart Stuff:
+    //////////////////////////////////////////////////////
+    am4core.useTheme(am4themes_animated);
+
+    var chart = am4core.create("chartdiv", am4maps.MapChart);
+    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+    chart.geodata = am4geodata_worldLow;
+    chart.projection = new am4maps.projections.Miller();
+
+    var title = chart.chartContainer.createChild(am4core.Label);
+    title.text = "";
+    title.fontSize = 20;
+    title.paddingTop = 30;
+    title.align = "center";
+    title.zIndex = 100;
+
+    var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
+    var polygonTemplate = polygonSeries.mapPolygons.template;
+    polygonTemplate.tooltipText = "{name}: {value.value.formatNumber('#.0')}";
+    polygonSeries.heatRules.push({
+      property: "fill",
+      target: polygonSeries.mapPolygons.template,
+      min: am4core.color("#ffffff"),
+      max: am4core.color("#cc2929")
+    });
+    polygonSeries.useGeodata = true;
+
+    // add heat legend
+    var heatLegend = chart.chartContainer.createChild(am4maps.HeatLegend);
+    heatLegend.valign = "bottom";
+    heatLegend.align = "left";
+    heatLegend.width = am4core.percent(100);
+    heatLegend.series = polygonSeries;
+    heatLegend.orientation = "horizontal";
+    heatLegend.padding(20, 20, 20, 20);
+    heatLegend.valueAxis.renderer.labels.template.fontSize = 10;
+    heatLegend.valueAxis.renderer.minGridDistance = 40;
+
+    polygonSeries.mapPolygons.template.events.on("over", event => {
+      handleHover(event.target);
+    });
+
+    polygonSeries.mapPolygons.template.events.on("hit", event => {
+      handleHover(event.target);
+    });
+
+    function handleHover(mapPolygon) {
+      if (!isNaN(mapPolygon.dataItem.value)) {
+        heatLegend.valueAxis.showTooltipAt(mapPolygon.dataItem.value);
+      } else {
+        heatLegend.valueAxis.hideTooltip();
+      }
+    }
+
+    polygonSeries.mapPolygons.template.strokeOpacity = 0.4;
+    polygonSeries.mapPolygons.template.events.on("out", event => {
+      heatLegend.valueAxis.hideTooltip();
+    });
+
+    chart.zoomControl = new am4maps.ZoomControl();
+    chart.zoomControl.valign = "top";
+
+
+var data = [];
+    countries.forEach(function(item){
+      contractInstance.methods.getAverage(item, 'heart bypass').call({from: account}, (error, result) => {
+          console.log("Data from web3.js ("+item+"): ", result);
+          data.push({ id: item, value: parseInt(result)});
+          console.log( "id", item, "value", result);
+          if(data.length >= 13) {
+              polygonSeries.data = data;
+              // excludes Antarctica
+              polygonSeries.exclude = ["AQ"];
+          }
+      });
+    });
+    console.log("temp", data);
+
+
+    /*polygonSeries.data = [
+  { id: "AF", value: 60.524 },
+  { id: "AL", value: 77.185 },
+  { id: "DZ", value: 70.874 },
+  { id: "AO", value: 51.498 },
+  { id: "AR", value: 76.128 },
+  { id: "AM", value: 74.469 },
+  { id: "AU", value: 82.364 },
+  { id: "AT", value: 80.965 },
+  { id: "AZ", value: 70.686 },
+  { id: "BH", value: 76.474 },
+  { id: "BD", value: 70.258 },
+  { id: "BY", value: 69.829 },
+  { id: "BE", value: 80.373 }];*/
+  //  polygonSeries.data = data;
+
 });
 
-chart.zoomControl = new am4maps.ZoomControl();
-chart.zoomControl.valign = "top";
 
-// life expectancy data
-polygonSeries.data = [
+//polygonSeries.data = [];
+/*
   { id: "AF", value: 60.524 },
   { id: "AL", value: 77.185 },
   { id: "DZ", value: 70.874 },
@@ -248,6 +322,4 @@ polygonSeries.data = [
   { id: "ZM", value: 57.037 },
   { id: "ZW", value: 58.142 }
 ];
-
-// excludes Antarctica
-polygonSeries.exclude = ["AQ"];
+*/

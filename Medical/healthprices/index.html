@@ -24,15 +24,33 @@
   <center>
     <br />
     <h1 style="font-family: Sans-Serif; font-size: 40px"><img src="/img/hospital.svg" style="width: 50px; vertical-align: bottom"; /> HealthPrices</h1>
-    <h3 style="font-weight: 100; font-size: 20px;" >Monthly health care costs compared by region. Self reported on the blockchain.</h3>
+    <h3 style="font-weight: 100; font-size: 20px;" >A comparison of global healthcare costs, filtered by procedure & self-reported on the blockchain.</h3>
+    Procedure: <select name="procedure" id="procedure" style="font-size: 20px">
+      <option value="heart bypass">Heart Bypass
+      <option value="hip replacement">Hip Replacement
+      <option value="dental implant">Dental Implant
+      <option value="breast implants">Breast Implants
+      <option value="rhinoplasty">Rhinoplasty
+    </select>
+    <a href="#" onclick="document.getElementById('costForm').style.display = 'block';">Submit A Cost</a>
+
     <br />
+
+    <div id="costForm" style="display: none">
+      <form name="cost">
+        <center><h5>Submit a cost for the currently selected procedure:</h5></center>
+        Country Code: <input type="text" name="region" id="region" /> <br />
+        Price: <input type="text" name="price" id="price" /><br />
+        <button onclick="">   Submit   </button>
+      </form>
+    </div>
 
     <div id="chartdiv"></div>
 
     <div class="info" style="width: 55%">
       <u><h2>What is this?</h2></u>
       <h4 style="font-weight: 100;">
-        HealthPrices is a comparison of health care costs from across the globe. The prices are self-reported by our users using the Ethereum blockchain. Users can filter the map by procedure types, and hover over different territories to get a sense of where they lie on the global healthcare cost scale.
+        HealthPrices is a comparison of health care costs from across the globe. The prices shown are a mean average of data points self-reported by our users on the Ethereum blockchain. Users can filter the map by procedure types, and hover over different territories to get a sense of where they lie on the global healthcare cost scale.
       </h4>
 
       <u><h2>Why do we need this?</h2></u>
@@ -45,14 +63,25 @@
         </ul>
         Just last month, President Trump <a href="https://www.whitehouse.gov/presidential-actions/executive-order-improving-price-quality-transparency-american-healthcare-put-patients-first/" target="_blank">signed an executive order</a> requiring hospitals to publicly post standard prices for medical care in an "easy-to-understand, consumer-friendly" format that will "allow patients to compare prices across hospitals." While this is a massive step forward for the United States, the rest of the world still is still lacking in healthcare transparency regulations.
       </h4>
+
+      <u><h2>How will it help?</h2></u>
+      <h4 style="font-weight: 100;">
+        According to <a href="https://pubs.aeaweb.org/doi/pdfplus/10.1257/pol.20150124" target="_blank">a study by Notre Dame University</a>, customers who search for prices can save 10% to 17% on health care costs. This is monumental!
+      </h4>
     </div>
 
+    <br /><br />
+    <b>Ropsten Smart Contract:</b> <a href="https://ropsten.etherscan.io/address/0xe7d3ae72d55edf4b7d3e3b6cae523b317cdea0df" target="_blank">0xe7d3ae72d55edf4b7d3e3b6cae523b317cdea0df</a>
     <br /><br />
   </center>
 
 
-
-    <script  src="./script.js"></script>
+  <!-- Web3 -->
+  <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.33/dist/web3.min.js"></script>
+  <!-- Modal -->
+  <script src="https://robinparisi.github.io/tingle/tingle/tingle.js"></script>
+  <!-- Main App -->
+  <script  src="./script.js"></script>
 
 
 
