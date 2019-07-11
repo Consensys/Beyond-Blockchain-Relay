@@ -1,0 +1,8 @@
+Deployed dApp: Invest-y-gative
+URL: https://ipfs.infura.io/ipfs/QmY6u6UwUnsZgRd5tzMhMojnNRhyGX2PziAyHZ3Z5bp3wM/index.html
+Network (for Metamask): Ropsten
+
+Deployed Smart Contracts: SourceMaterial.sol
+
+Address: 0x81dbcecd8bbc846baad93935b7dbec24f2664ba3
+Network: Ropsten
