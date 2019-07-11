@@ -27,6 +27,7 @@ List each team member, along with the below fields
 
 * **Name:** Seena Zandipour
 * **Email:** craze3@gmail.com
+* **Ethereum Address:** 0x5A0f2C1d8E563db79Ee40F979F6bcD0d27f86f80
 * **Role:** CEO, Full-Stack Developer, Solidity Developer, Designer
 * **OK to contact about future hackathons?** Yes!
 
@@ -41,6 +42,12 @@ If some of your material cannot be uploaded to GitHub (ie. Google Slides, a pitc
 
 - **Video:** Coming Soon
 - **Demo URL:** [https://healthprices.net](https://healthprices.net)
+
+**Other Resources (In This Repo):**
+- /Resources/HealthPrices.sol - Our Ethereum smart contract written in Solidity. Currently deployed to Ropsten testnet: 0xe7d3ae72d55edf4b7d3e3b6cae523b317cdea0df
+- /Resources/JS Example - Geo heatmap chart from codepen (Free).zip - Open license codepen snippet to generate Geographic heatmap using amCharts V4 library.
+- /Resources/Report - Trumps Executive Orde…erican Healthcare to Put Patients First (The White House).pdf - Executive order from President Donald Trump, issued last month, demanding all hospitals to disclose healthcare prices. Shows that this issue is important NOW.
+- /Resources/Study - Notre Dame University shows patients save 15% on healthcare.pdf - An important study that shows that tackling this problem WILL be beneficial to the world!
 
 ## Project Launch Page
 [https://healthprices.net](https://healthprices.net)
