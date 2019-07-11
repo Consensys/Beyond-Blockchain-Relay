@@ -10,7 +10,7 @@ This product allows farmers connect with buyers and investors via whatsapp, the 
 
 ## Project Team
 * Owanate Amachree (https://github.com/owans) - amachreeowanate@gmail.com - OK to be contacted for future hackathons.
-* PapeAlioune (https://github.com/papeAlioune) -  - OK to be contacted for future hackathons.
+* Alioune Badara Diakhate (https://github.com/papeAlioune) - toastingsatelite@gmail.com - OK to be contacted for future hackathons.
 * Siphamandla Brian (https://github.com/Brianspha) -  g14m1190@campus.ru.ac.za - OK to be contacted for future hackathons.
 
 
