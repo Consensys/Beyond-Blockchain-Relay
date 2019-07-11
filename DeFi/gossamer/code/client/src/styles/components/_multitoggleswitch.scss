@@ -1,0 +1,60 @@
+.toggle-wrapper {
+    margin: 0 auto;
+    max-width: 600px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .toggle-wrapper label {
+    //padding: 0.3em;
+    font-family: $systemfonts;
+    display: block;
+  }
+  
+  .toggleContainer {
+    width: 100%;
+    
+    position: relative;
+    background-color: $transparentgrey;
+    box-shadow: 0 0 0 0.5px $lightgrey;
+    border-radius: $borderradius * 2;
+  }
+  
+  .toggleContainer .toggleOption {
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    height: 40px;
+    line-height: 40px !important;
+    padding-bottom: 0;
+    cursor: pointer;
+    transition: all 0.15s ease-in-out;
+
+    @extend %caption-text;
+    color: $offwhite;
+  }
+  
+  .toggleContainer .toggleOption.selected {
+    @extend %caption-text;
+
+    color: $blueiris;
+    cursor: initial;
+  }
+  
+  .toggleContainer .toggle {
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    transition: all 0.15s ease-in-out;
+    background-color: $offwhite;
+    border: 0.25px solid $lightgrey;
+    border-radius: $borderradius * 2;
+  }
+  
+  .optionDisabled {
+    background: #e6e6e6;
+    
+    cursor: no-drop !important;
+  }

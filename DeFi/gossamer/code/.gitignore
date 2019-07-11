@@ -1,0 +1,10 @@
+/node_modules/
+*.log
+*.DS_Store
+/.vscode/
+bundle.js
+bundle.js.gz
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

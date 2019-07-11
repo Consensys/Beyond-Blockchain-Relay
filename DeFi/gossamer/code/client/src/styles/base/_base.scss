@@ -1,0 +1,47 @@
+
+html {
+    //set base computed font size to 10px
+	font-size: 62.5%;
+	box-sizing: border-box;
+
+}
+
+body {
+	
+	-webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	
+
+	/*
+	background: linear-gradient(
+		to right, 
+		rgba(161, 189, 200, 0.4) 0%, 
+	/*	rgba(100, 199, 240, 0.33) 50%, 
+		rgba(161, 189, 200, 1) 50%,
+		rgba(161, 189, 200, 0.4) 100% 
+	);*/
+
+	margin: 0;
+}
+
+.page-container {
+	position: relative;
+	min-height: 100vh;
+}
+
+.content-wrap {
+	padding-bottom: 2.5rem;    /* Footer height */
+}
+
+.page-wrapper {
+	margin-left: $titlesize * 2.5;
+	margin-right: $titlesize * 2.5;
+	min-height: 100vh;
+}
+
+@media (max-width: 1200px) {
+	.page-wrapper {
+		margin-left: $titlesize;
+		margin-right: $titlesize;
+	}
+}

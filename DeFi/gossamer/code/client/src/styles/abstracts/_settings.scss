@@ -1,0 +1,51 @@
+$livingcoral: rgba(250, 114, 104, 1);
+$darkercoral: rgba(250, 91, 79, 1);  
+$fadedcoral: rgba(255, 169, 155, 1);
+$bannercoral: rgba(250, 114, 104, 0.85);
+
+$serenityblue: rgba(145, 168, 208, 1);
+$emerald: rgba(0, 152, 116, 1);
+$lightemerald: rgba(66, 176, 150, 1);
+$turquoise: rgba(69, 181, 170, 1);
+$greenery: rgba(136, 176, 75, 1);
+
+$blueiris: rgb(91, 94, 166);
+
+$black: rgba(0, 10, 26, 0.9);
+$offblack: rgba(68, 68, 68, 1);
+$darkgrey: rgba(105, 105, 105, 1);
+$lightgrey: rgba(154, 154, 154, 1);
+$offwhite: rgba(248, 248, 255, 1);
+$transparentoffwhite: rgba(248, 248, 255, 0.8);
+$white: rgba(255, 255, 255, 1);
+
+$transparentgrey:rgba(241, 241, 241, 0.3);
+$dashboardgradient: top, $blueiris 0, $turquoise 120%;
+$dashboarditemborder: 0.5px solid rgba(230, 235, 235, 0.8);
+
+$bannergradient: top, $darkgrey 0, $turquoise 120%;
+
+$pendingyellow: #9b870c;
+
+$titlesize: 3.2rem; // 32px
+$bigsize: 2.4rem; // 24px
+$mediumsize: 1.6rem; // 16px
+$smallsize: 1.2rem; // 12px
+
+$borderradius: 10px;
+
+$systemfonts: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+
+$box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+$card-box-shadow: 0 5px 10px rgba(0,0,0,0.19), 0 3px 3px rgba(0,0,0,0.23);
+$bannerboxshadow: rgba(0, 0, 0, 0.2) 0px 5px 50px;
+$alternate-box-shadow: 0 4px 6px rgba(0, 0, 0, .08);
+// compound     box-shadow: 0 2px 4px rgba(16, 21, 24, .05);
+
+$box-shadow-hover: 0px 7px 10px 0px rgba(0, 0, 0, 0.2);
+
+$breakpoints: (
+  'medium': (min-width: 800px),
+  'large': (min-width: 1000px),
+  'huge': (min-width: 1200px),
+);

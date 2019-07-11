@@ -1,0 +1,69 @@
+
+.progress-bar-wrapper {
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 450px;
+}
+
+.react-sweet-progress {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+// the progress bar itself
+.react-sweet-progress-line {
+  // border: 0.5px solid $lightgrey;
+}
+
+// the emoji
+.react-sweet-progress-symbol {
+  font-family: $systemfonts;
+	line-height: 1.4em;
+	font-size: $titlesize;
+
+	color: $darkgrey;
+	font-weight: 600;
+	
+	margin: $smallsize $smallsize ($titlesize * 1.5);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// the filled-in portion
+.react-sweet-progress-line-inner {
+  height: 13px;
+}
+
+.progress-bar-item {
+  margin: $smallsize $bigsize 0;
+
+  position: relative;
+  top: 60px;
+  left: 8px;
+}
+
+.progress-bar-selected-item {
+  @extend %medium-text;
+  
+  font-weight: 800;
+  color: $blueiris;
+  margin-top: $smallsize / 3;
+  transition: font-size 0.25s ease-out;
+  transition: color 0.25s ease-out;
+  position: relative;
+  top: 62px;
+}
+
+.progress-bar-unselected-item {
+  @extend %small-text;
+  
+  transition: font-size 0.25s ease-out;
+}
+
+.progress-bar-text-row {
+  height: 0;
+}

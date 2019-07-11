@@ -1,0 +1,114 @@
+.withdraw-page-wrapper {
+    @extend %center-unit;
+    background-color: $offwhite;
+}
+
+.withdraw-page-wrapper .page-wrapper {
+    z-index: 3;
+}
+
+.withdraw-page-wrapper .title-text--bold {
+    color: $offwhite;
+}
+
+.withdraw-form-wrapper {
+    margin: auto;
+    text-align: center;
+}
+
+.withdraw-unit {
+    @extend %dashboard-data-unit;
+    width: auto;
+    margin: $mediumsize auto $titlesize;
+    padding: $bigsize ($titlesize * 1.5);
+}
+
+.withdraw-page-wrapper::before {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    left: 0;
+    height: 200px;
+    width: 100%;
+    background-image: -webkit-linear-gradient($dashboardgradient);
+    background-image: linear-gradient($dashboardgradient);
+}
+
+.withdraw-page-wrapper .dashboard-header-wrapper {
+    @extend %dashboard-data-unit;
+
+    padding: $bigsize;
+    width: 100%;
+}
+
+.withdraw-form-wrapper .tooltip {
+	bottom: 4px;
+	margin-right: 6px;
+}
+
+.grid {
+    display: grid;
+    min-width: 400px;
+    grid-template-columns: 1fr 1fr;
+   // grid-template-columns: repeat(auto-fit, minmax(200px, 500px));
+    grid-template-rows: 1fr 1fr 1fr;
+    //grid-template-rows: repeat(auto-fit, minmax(200px, 500px));
+    grid-gap: 40px;
+    margin: $titlesize 0;
+}
+
+.grid-item-left {
+    min-width: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    text-align: right;
+    margin: $smallsize 0;
+    
+}
+
+.grid-item-right {
+    // min-width: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    margin: $smallsize 0;
+}
+
+
+.withdraw-modal-wrapper button {
+    margin: $bigsize 0;
+}
+
+.withdraw-page-wrapper .dashboard-header-wrapper .title-text--bold {
+    color: $darkgrey;
+}
+.withdraw-page-wrapper .withdraw-modal-wrapper .title-text--bold {
+    color: $darkgrey;
+}
+
+.withdraw-confirmation-button-wrapper button {
+    margin: $bigsize $bigsize;
+}
+
+
+.withdraw-dai-input {
+    display: flex;
+    align-items: center;
+}
+
+.withdraw-input-available-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+.withdraw-confirmation-text {
+    margin: 0 ($titlesize * 4);
+}

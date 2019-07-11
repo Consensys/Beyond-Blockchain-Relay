@@ -1,0 +1,262 @@
+/* General text styling */
+
+// Hero/title text, not bold
+%title-text {
+    font-family: $systemfonts;
+	font-size: $titlesize;
+	font-weight: 600;
+	color: $black;
+	letter-spacing: 1.15px;
+}
+
+.title-text {
+	@extend %title-text;
+}
+
+// Hero/title text, bold
+.title-text--bold {
+	@extend %title-text;
+	font-weight: 800;
+	text-align: center;
+}
+
+// Big size/prominence text, one step below Hero/title text
+%big-text {
+    font-family: $systemfonts;
+	line-height: 1.4em;
+	font-size: $bigsize;
+
+	color: $black;
+	// min-width: 230px; taking this out for Step 3, but may want to add that back in
+	font-weight: 500;
+	
+	margin: $smallsize 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 0.2px;
+}
+
+.big-text {
+	@extend %big-text;
+}
+
+// Big size/prominence text, one step below Hero/title text, bold
+.big-text--bold {
+    @extend %big-text;
+	font-weight: 700;
+}
+
+// Medium size/prominence text, one step below Big
+%medium-text {
+  font-family: $systemfonts;
+	line-height: 1.4em;
+	font-size: $mediumsize;
+
+	color: $offblack;
+	//min-width: 230px;
+	font-weight: 500;
+	
+	margin: $smallsize 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	letter-spacing: 0.2px;
+}
+
+.medium-text {
+	@extend %medium-text;
+}
+
+// Medium size/prominence text, one step below Big, bold
+.medium-text--bold {
+    @extend %medium-text;
+	font-weight: 800;
+}
+
+
+// Small size/prominence text, one step below medium
+
+%small-text {
+    font-family: $systemfonts;
+	line-height: $smallsize;
+	font-size: $smallsize;
+	color: $lightgrey;
+	//min-width: 230px;
+	
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 500;
+}
+
+.small-text {
+	@extend %small-text;
+}
+
+// Small size/prominence text, one step below medium, bold
+
+.small-text--bold {
+    @extend %small-text;
+    font-weight: 800;
+}
+
+@mixin small-text--bold() {
+	font-family: $systemfonts;
+	line-height: $smallsize;
+	font-size: $smallsize;
+	color: $offblack;
+	//min-width: 230px;
+	
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-weight: 800;
+}
+
+// Uppercase label/denominations text
+%caption-text {
+	@extend %small-text;
+
+	color: $offblack;
+	//display: block;
+	font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  line-height: 1.4rem;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.caption-text {
+	@extend %caption-text;
+}
+
+
+// Grey timestamp text
+
+.timestamp-text {
+	font-family: $systemfonts;
+	font-size: $smallsize;
+	font-style: italic;
+	color: $lightgrey;
+	min-width: 230px;
+	
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+}
+
+
+// Navbar text 
+%navbar__title {
+	font-family: 'Neuton', serif;
+  color: $offwhite;
+  letter-spacing: 3px;
+	font-size: $titlesize;
+	padding-left: $smallsize;
+	
+	margin: 0;
+}
+
+.navbar__title {
+	@extend %navbar__title;
+}
+
+
+.nav-container .nav-item {
+	@extend %medium-text;
+	margin: 0 !important;
+	color: $offwhite;
+	min-width: 30px;
+}
+
+// Footer text 
+.footer-container .footer-item {
+	font-size: $mediumsize;
+	font-family: $systemfonts;
+	font-weight: 800;
+	color: $lightgrey;
+}
+
+.footer-logo-text {
+    @extend %navbar__title;
+    color: $blueiris;
+}
+
+.footer-small-text {
+	@extend %medium-text;
+    padding-left: 50px;
+	color: $lightgrey !important;
+}
+
+
+// Fiat conversion text
+
+.fiat-conversion-text {
+	@extend %medium-text;
+	font-style: italic;
+	font-weight: 400;
+}
+
+
+// Below-button text
+
+.below-button-copy {
+	width: 100%;
+}
+
+.below-button-copy .small-text {
+	width: 50%
+}
+
+@media (max-width: 1000px) {
+	.below-button-copy .small-text {
+		width: 100%
+	}
+}
+
+
+
+// Italics
+
+.italics {
+	font-style: italic;
+}
+
+//Placeholder text for input fields
+
+// Chrome/Opera/Safari 
+.input::-webkit-input-placeholder { 
+	font-weight: 300;
+	color: $offwhite;
+	opacity: 0.75;
+	font-size: $mediumsize;
+	font-style: italic;
+}
+
+// Firefox 19+ 
+.input::-moz-placeholder { 
+	font-weight: 300;
+	color: $offwhite;
+	opacity: 0.75;
+	font-size: $mediumsize;
+	font-style: italic;
+}
+
+ // IE 10+
+.input:-ms-input-placeholder {
+	font-weight: 300;
+	color: $offwhite;
+	opacity: 0.75;
+	font-size: $mediumsize;
+	font-style: italic;
+}
+
+//Firefox 18-
+.input:-moz-placeholder {  
+	font-weight: 300;
+	color: $offwhite;
+	opacity: 0.75;
+	font-size: $mediumsize;
+	font-style: italic;
+}

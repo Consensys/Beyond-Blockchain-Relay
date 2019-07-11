@@ -1,0 +1,482 @@
+
+// Regular rounded buttons
+%button {
+	padding: 12px 30px;
+	height: 40px;
+
+	text-align: center;
+	border-radius: $borderradius;
+	font-weight: 700;
+	font-family: $systemfonts;
+	font-size: $smallsize;
+	letter-spacing: 1.4px;
+	line-height: 1rem;
+	text-transform: uppercase;
+	box-shadow: $box-shadow;
+	border: 0;
+
+	background-color: $blueiris;
+	color: $offwhite;
+
+	transition: all .2s ease-in-out;
+	cursor: pointer;
+	outline: none;	
+	box-sizing: border-box;
+}
+
+.button {
+	@extend %button;
+}
+
+.button:hover {
+	box-shadow: $box-shadow-hover;
+	transform: scale(1.1);
+}
+
+.button:disabled {
+	background-color: $lightgrey;
+}
+
+.button--alternate {
+	@extend %button;
+	border: 3px solid $blueiris;
+	color: $blueiris;
+	background-color: $offwhite;
+}
+
+.button--alternate:hover {
+	box-shadow: $box-shadow-hover;
+	transform: scale(1.1);
+}
+
+%button--buttongroup {
+	@extend %small-text;  
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 0 ($smallsize / 2);
+    text-align: center;
+    border-radius: $borderradius / 2;
+    color: #fff;
+		background-color: $darkgrey;
+		transition: all .2s ease-in-out;
+
+    outline: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.button--buttongroup {
+	@extend %button--buttongroup;
+}
+
+.button--buttongroup:hover {
+	box-shadow: $box-shadow-hover;
+	transform: scale(1.1);
+}
+
+
+.button--back {
+	border: 3px solid $blueiris;
+	padding: 7.5px 12.5px;
+	border-radius: 7.5px;
+
+	font-weight: 600;
+	font-family: $systemfonts;
+	font-size: $smallsize;
+	letter-spacing: 1.25px;
+	text-transform: uppercase;
+
+	background-color: $offwhite;
+	color: $blueiris;
+	box-shadow: $box-shadow;
+
+	transition: all 0.3s ease 0s;
+	cursor: pointer;
+	outline: none;	
+
+	margin-right: auto;
+	//text-align: left;
+}
+
+.button--back:hover {
+	background-color: lightgrey;
+	box-shadow: $box-shadow-hover;
+	color: $blueiris;
+	border: 3px solid $blueiris;
+
+	transform: translateY(-3px);
+	margin-right: auto;
+}
+
+// Step 8 Copy Button
+.button--copy {
+	@extend %button;
+	margin-left: $smallsize;
+	padding: 12px 10px;
+}
+
+.button--copy:hover{
+	box-shadow: $box-shadow-hover;
+	transform: scale(1.1);
+}
+
+// Supply Flow next step buttons - give a little space between content and button
+.supply-flow-action-wrapper .next-step-button {
+	margin-top: $titlesize;
+	margin-bottom: $mediumsize;
+}
+
+
+// Toggle switches - used in Settings modal
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 34px;
+	height: 20px;
+	//border: 1px solid $lightgrey;// border is square but my switch has rounded corners
+}
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: $offwhite;
+		-webkit-transition: .3s;
+		transition: .3s;
+  }
+  
+  .slider:before {
+		position: absolute;
+		content: "";
+		height: 15px;
+		width: 15px;
+		left: 2px;
+		bottom: 2.5px;
+		background-color: white;
+		-webkit-transition: .3s;
+		transition: .3s;
+		box-shadow: 0px 5px 9px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  input:checked + .slider {
+		background-color: $serenityblue;
+  }
+  
+  input:focus + .slider {
+		box-shadow: 0 0 1px $serenityblue;
+  }
+  
+  input:checked + .slider:before {
+		-webkit-transform: translateX(16px);
+		-ms-transform: translateX(16px);
+		transform: translateX(16px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+		border-radius: 34px;
+  }
+  
+  .slider.round:before {
+		border-radius: 50%;
+  }
+
+
+
+  //ICONS//
+
+  .reload-icon {
+		color: $darkgrey;
+		cursor: pointer;
+		padding: 10px;
+		background-clip: content-box; 
+  }
+
+  .reload-icon:hover {
+	color: darkgrey;
+	transform: translateY(-5px);
+	}
+	
+
+//Input form fields - there's a good amount of CSS here for the animation/effect.
+
+input[type="text"] {
+	font-family: $systemfonts;
+	font-size: $mediumsize; 
+	color: $lightgrey; 
+	width: 100%; 
+  box-sizing: border-box; 
+	letter-spacing: 1px;
+	// min-width: 150px;
+	// max-width: 450px;
+}
+
+.col-3 { 
+	float: left; 
+	width: 60%; 
+	margin: 10px 3% 10px; 
+	position: relative;
+
+} /* necessary to give position: relative to parent. */
+
+.effect-20 {
+	padding: 10px 0 10px 10px;
+	width: 225px;
+	font-family: $systemfonts;
+	font-size: $mediumsize; 
+
+}
+
+// top and bottom part of border effect
+.effect-20 ~ .focus-border:before,
+.effect-20 ~ .focus-border:after {
+	content: ""; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 0; 
+	height: 2px; 
+	background-color: $blueiris; 
+	transition: 0.3s;
+}
+.effect-20 ~ .focus-border:after{
+	top: auto; 
+	bottom: 0; 
+	left: auto; 
+	right: 0;
+}
+
+// left and right part of border effect
+.effect-20 ~ .focus-border i:before,
+.effect-20 ~ .focus-border i:after{
+	content: ""; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 2px; 
+	height: 0; 
+	background-color: $blueiris; 
+	transition: 0.4s;
+}
+.effect-20 ~ .focus-border i:after{
+	left: auto; 
+	right: 0px; 
+	top: auto; 
+	bottom: 0;
+}
+.effect-20:focus ~ .focus-border:before,
+.effect-20:focus ~ .focus-border:after,
+.has-content.effect-20 ~ .focus-border:before,
+.has-content.effect-20 ~ .focus-border:after{
+	width: 100%; 
+	transition: 0.3s;
+}
+.effect-20:focus ~ .focus-border i:before,
+.effect-20:focus ~ .focus-border i:after,
+.has-content.effect-20 ~ .focus-border i:before,
+.has-content.effect-20 ~ .focus-border i:after{
+	height: 100%; 
+	transition: 0.4s;
+}
+
+.effect-20 ~ label{
+	position: absolute; 
+	left: 14px; 
+	width: 100%; 
+	top: 10px; 
+	color: $lightgrey; 
+	transition: 0.3s; 
+	z-index: -1; 
+	letter-spacing: 0.5px;
+	font-family: $systemfonts;
+}
+
+.effect-20:focus ~ label, .has-content.effect-20 ~ label{
+	top: -18px; 
+	left: -85px; 
+	font-size: 12px; 
+	font-weight: 500;
+	color: $blueiris;
+	transition: 0.3s;
+	font-family: $systemfonts;
+	z-index: 1;
+}
+
+// for Step 5 Set Address, Ethereum address input
+
+.supply-flow-action-wrapper .effect-20:focus ~ label, .supply-flow-action-wrapper .has-content.effect-20 ~ label{
+	top: -18px; 
+	left: -155px; 
+	font-size: 12px; 
+	font-weight: 500;
+	color: $blueiris;
+	transition: 0.3s;
+	font-family: $systemfonts;
+	z-index: 1;
+}
+
+// Shorter inputs for numbers
+.input-number {
+	max-width: 350px !important;
+}
+
+.withdraw-page-wrapper .input-field-effect:focus ~ .focus-border,
+.withdraw-page-wrapper .has-content.input-field-effect ~ .focus-border {
+    width: 45%; 
+    transition: 0.4s;
+}
+
+// Shorter div/input for truncated Ethereum addresses and can't be selected
+.ethereum-address-wrapper {
+	border: 0.5px solid $lightgrey;
+	background-color: white;
+	padding: 0 $smallsize 0;
+	max-width: 240px;
+
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.ethereum-address-wrapper p {
+	margin: 0;
+}
+
+:focus {
+    outline: none;
+}
+
+// Links
+
+a {
+	color: $blueiris;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+
+// Tooltips on hover
+
+    /* Tooltip container */
+.tooltip {
+	position: relative;
+	display: inline-block;
+	cursor: help;
+	bottom: -4.5px;
+}
+
+    /* Tooltip text */
+.tooltip .tool-tip-text {
+	@extend %small-text;
+
+	visibility: hidden;
+	width: 200px;
+	background-color: $lightgrey;
+	color: #fff;
+	text-align: center;
+	padding: $smallsize;
+	border-radius: 6px;
+
+	/* Position the tooltip text */
+	position: absolute;
+	z-index: 1;
+	bottom: 125%;
+	left: 50%;
+	margin-left: -110px;
+
+	/* Fade in tooltip */
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+		/* Tooltip arrow */
+.tooltip .tool-tip-text::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 5px;
+	border-style: solid;
+	border-color: #555 transparent transparent transparent;
+}
+
+		/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tool-tip-text {
+	visibility: visible;
+	opacity: 0.95;
+	z-index: 3;
+}
+
+		/* Tool	tip icon */
+
+.tooltip-icon {
+	color: $lightgrey;
+}
+
+		/* External Link Icon */
+
+.external-link-icon {
+	margin-left: $smallsize / 2;
+	margin-right: $smallsize / 4;
+	top: $smallsize;
+}
+
+
+// Boxy modern toggle click switch - used in Dashboard, not the main one
+.mini-toggle-switch-wrapper {
+	margin-top: $bigsize;
+}
+
+.mini-toggle-switch-wrapper label {
+	@extend %small-text;
+	display: inline-block;
+  border: 3px solid $blueiris;
+  padding: 5px 10px;
+	margin: 0;
+	color: $blueiris;
+
+}
+
+.mini-toggle-switch-wrapper input:checked + label {
+	background: $blueiris;
+	color: $offwhite;
+}
+
+	// Don't hide the radio button in older browsers 
+.mini-toggle-switch-wrapper input:checked,
+.mini-toggle-switch-wrapper input:not(:checked) {
+  display: none;
+}
+
+.image--screenshot {
+	margin: $bigsize auto;
+	border: 1px solid $lightgrey;
+}
+

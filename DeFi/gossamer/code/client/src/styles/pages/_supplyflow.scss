@@ -1,0 +1,357 @@
+.supply-flow-action-wrapper {
+    text-align: center;
+    margin: 0 ($titlesize * 4);
+}
+
+.supply-flow-header-row {
+    display: flex;
+    align-items: center;
+}
+
+.supply-flow-header-row .left-dummy-item,
+.supply-flow-header-row .right-dummy-item {
+    flex: 1;
+}
+
+
+.supply-flow-info-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.supply-flow-text-wrapper {
+    text-align: left;
+}
+
+.supply-flow-info-unit {
+    text-align: center;
+}
+
+// Link Icon wrapper, not using currently
+.supply-link-icon-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+// Used in Step 6 Set Address and Step 7 Set Amount
+.supply-details-form-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+// Step 2: Stablecoins
+
+.supply-flow-stablecoins-explainer-wrapper {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 3fr;
+    margin: $bigsize auto 0;
+    grid-row-gap: $smallsize;
+}
+
+.supply-flow-stablecoins-explainer-row {
+    border-bottom: 1px solid $darkgrey;
+}
+
+.stablecoin-explainer-text-grid-item {
+    text-align: left;
+    color: $darkgrey;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.stablecoin-explainer-icon-grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+// Step 3: Coin Picker
+
+   // For the 2 Coin icons
+.coin-picker-icons-wrapper {
+    display: flex;
+    margin: 0 auto;
+    // flex-wrap: wrap;
+}
+
+.picker-dai-icon, .picker-usdc-icon {
+    @extend %dashboard-data-unit;
+
+    box-sizing: border-box;
+    padding: $smallsize $bigsize $smallsize;
+    margin: $titlesize;
+    cursor: pointer;
+    flex: 1;
+    // max-height: 410px;
+    min-width: 300px;
+    height: 600px;
+}
+
+.coin-picker-icons-wrapper .big-text {
+    margin-bottom: 0;
+}
+
+.coin-picker-icons-wrapper .small-text {
+    margin-top: 0;
+}
+
+@media (max-width: 1400px) {
+    .picker-dai-icon, .picker-usdc-icon {
+        height: 500px;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .picker-dai-icon, .picker-usdc-icon {
+        height: 550px;
+        min-width: 300px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .picker-dai-icon, .picker-usdc-icon {
+        height: 100%;
+        max-height: 550px;
+        min-width: 300px;
+    }
+    .coin-picker-icons-wrapper {
+        flex-wrap: wrap;
+    }
+}
+
+.coin-picker-icons-wrapper .tooltip {
+	bottom: 4px;
+	// margin-right: 6px;
+}
+
+.coin-picker-icons-wrapper p {
+    margin: $smallsize 0;
+}
+
+    // The selected coin
+.active-icon {
+    border: 7px solid $blueiris;
+} 
+
+.active-text {
+    @extend %small-text;
+    color: $offwhite;
+    font-weight: 600;
+    background-color: $blueiris;
+
+    border-radius: 0 0 $borderradius 0;
+    padding: 0 ($smallsize / 2) ($smallsize / 2) 0;
+    margin: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+
+    // For the details below
+.coin-picker-grid-wrapper {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: $titlesize auto;
+    max-width: 800px;
+}
+
+.coin-picker-grid-wrapper .caption-text {
+    padding: 0;
+    margin: $mediumsize 0;
+}
+
+// THE GRAPH
+.supply-comparison-graph-wrapper {
+    @extend %small-text;
+    font-size: 1rem;
+}
+
+
+// Step 4: Interest rates
+.supply-flow-interest-wrapper {
+    @extend %dashboard-data-unit;
+    text-align: left;
+    padding: $titlesize;
+    margin: $bigsize auto;
+    display: table;
+    width: auto;
+}
+
+// Step 6: Set Address
+.supply-flow-set-address-text-wrapper {
+    text-align: left;
+    width: 80%;
+    margin: 0 auto $bigsize;
+}
+
+.supply-set-info-wrapper {
+    text-align: center;
+    margin: auto;
+}
+
+.user-assets-balance {
+    text-align: center;
+    margin: 0 auto;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.user-assets-balance h2 {
+    font-weight: 700;
+}
+
+.user-balance-item {
+    @extend %medium-text;
+    margin: 0;
+}
+
+.supply-flow-action-wrapper form .button {
+    margin: 40px auto 10px;
+    width: 50%;
+  }
+
+  .supply-flow-transaction-infographic {
+      padding: $smallsize 0
+  }
+
+
+// Step 7 Default Options Button Wrapper
+.supply-flow-button-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.supply-flow-button-wrapper .button--alternate {
+    max-width: 150px;
+    width: 100%;
+    padding: 12px 15px;
+}
+
+//Step 8 - Send Transaction
+.supply-transaction-flex-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.supply-transaction-instructions-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: $bigsize;
+}
+
+// The section with the tips on how to send
+.supply-transaction-instructions-row {
+    display: flex;
+    align-items: center;
+}
+
+.supply-transaction-instructions-text {   
+    margin: $mediumsize;
+}
+
+.supply-transaction-action-links-container {
+    display: flex;
+    flex-direction: column;
+    // justify-content: flex-start;
+    text-align: left;
+    
+    margin-left: $mediumsize;
+}
+
+.supply-transaction-action-links-container .small-text {
+    margin: 0 0 ($smallsize / 2);
+}
+
+.supply-transaction-link-text {
+    // position: relative;
+    // top: 1px;
+    text-align: left;
+}
+
+
+.supply-transaction-action-wrapper {
+    @extend %dashboard-data-unit;
+    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    margin: $titlesize auto;
+    grid-gap: $titlesize;
+    padding: $mediumsize $bigsize;
+    width: 80%;
+}
+
+.send-grid-item-right-column {
+    margin: $smallsize 0;
+    text-align: left;
+    color: $darkgrey;
+}
+
+.send-grid-item-left-column {
+    margin: $smallsize 0;
+    text-align: right;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+	align-items: center;
+}
+
+
+
+.supply-transaction-action-wrapper .tooltip {
+    bottom: 7px;
+}
+
+@media (max-width: 1200px) {
+	.supply-transaction-action-wrapper {
+	    grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: 1fr;
+        min-width: 400px;
+        margin: auto;
+    }
+    
+    .send-grid-item-right-column {
+        text-align: center;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .send-grid-item-left-column {
+        text-align: center;
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .supply-action-grid-bottom-row {
+        grid-column: 1;
+        grid-row: 5;
+    }
+}

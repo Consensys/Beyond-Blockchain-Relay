@@ -1,0 +1,87 @@
+.cube-loading-animation-wrapper {
+  padding: $bigsize;
+  margin-left: $mediumsize;
+}
+
+.box--listening {
+  background-color: $pendingyellow;
+  // border: 4px solid $pendingyellow;
+  transition: background-color 1s ease-out; 
+  // transition: border 1s ease-out; 
+}
+
+.box--pending {
+  background-color: $greenery;
+  // border: 4px solid $greenery;
+  transition: background-color 1s ease-out; 
+  // transition: border 1s ease-out; 
+}
+
+.box--completed {
+  background-color: $emerald;
+  // border: 4px solid $emerald;
+  transition: background-color 1s ease-out; 
+  // transition: border 1s ease-out; 
+}
+
+.loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border: 4px solid $lightgrey;
+  top: 50%;
+  animation: loader 8s infinite ease;
+}
+
+.loader-inner {
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  // background-color: $lightgrey;
+  animation: loader-inner 2s infinite ease-in;
+}
+
+@keyframes loader {
+0% {
+  transform: rotate(0deg);
+}
+
+25% {
+  transform: rotate(180deg);
+}
+
+50% {
+  transform: rotate(180deg);
+}
+
+75% {
+  transform: rotate(360deg);
+}
+
+100% {
+  transform: rotate(360deg);
+}
+}
+
+@keyframes loader-inner {
+  0% {
+    height: 0%;
+  }
+
+  25% {
+    height: 0%;
+  }
+
+  50% {
+    height: 100%;
+  }
+
+  75% {
+    height: 100%;
+  }
+
+  100% {
+    height: 0%;
+  }
+}
