@@ -1,0 +1,363 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "angularexampleapp": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-builders/custom-webpack:browser",
+          "options": {
+            "outputPath": "dist/browser/",
+            "index": "src/index.html",
+            "main": "src/main.browser.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.browser.json",
+            "aot": true,
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "src/assets/images",
+                "output": "/assets/images"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "src/assets",
+                "output": "/assets/common"
+              },
+              {
+                "glob": "googled41787c6aae2151b.html",
+                "input": "src/assets",
+                "output": "/assets/common"
+              },
+              {
+                "glob": "CNAME",
+                "input": "src/assets",
+                "output": "/assets/common"
+              },
+              {
+                "glob": "robots.txt",
+                "input": "src/assets",
+                "output": "/assets/common"
+              },
+              {
+                "glob": "manifest.webmanifest",
+                "input": "src/assets",
+                "output": "/assets/common"
+              }
+            ],
+            "styles": [
+              "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/assets/css/reset.css",
+              "src/assets/css/loading.css",
+              "src/app/shared/styles/global.scss"
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/shared/styles"
+              ]
+            },
+            "scripts": [
+              "src/assets/js/gtm.js",
+              "src/assets/js/modernizr.js"
+            ],
+            "customWebpackConfig": {
+              "path": "./extra-webpack.config.js",
+              "replaceDuplicatePlugins": true,
+              "mergeStrategies": {
+                "externals": "prepend"
+              }
+            },
+            "serviceWorker": true,
+            "ngswConfigPath": "ngsw-config.json"
+          },
+          "configurations": {
+            "en": {
+              "aot": true,
+              "outputPath": "dist/browser/",
+              "baseHref": "/",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error"
+            },
+            "es": {
+              "aot": true,
+              "outputPath": "dist/browser/es/",
+              "baseHref": "/es/",
+              "i18nFile": "src/i18n/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            },
+            "production-en": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ],
+              "outputPath": "dist/browser/",
+              "baseHref": "/",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error"
+            },
+            "production-es": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ],
+              "outputPath": "dist/browser/es/",
+              "baseHref": "/es/",
+              "i18nFile": "src/i18n/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error"
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "angularexampleapp:build:en"
+          },
+          "configurations": {
+            "en": {
+              "browserTarget": "angularexampleapp:build:en"
+            },
+            "es": {
+              "browserTarget": "angularexampleapp:build:es"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "angularexampleapp:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "scripts": [
+              "src/assets/js/gtm.js",
+              "src/assets/js/modernizr.js"
+            ],
+            "styles": [
+              {
+                "input": "node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css"
+              },
+              "src/assets/css/reset.css",
+              "src/assets/css/loading.css",
+              "src/app/shared/styles/global.scss"
+            ],
+            "assets": [
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets"
+              },
+              {
+                "glob": "sitemap.xml",
+                "input": "src/assets",
+                "output": "/"
+              },
+              {
+                "glob": "googled41787c6aae2151b.html",
+                "input": "src/assets",
+                "output": "/"
+              },
+              {
+                "glob": "CNAME",
+                "input": "src/assets",
+                "output": "/"
+              },
+              {
+                "glob": "manifest.webmanifest",
+                "input": "src/assets",
+                "output": "/"
+              }
+            ],
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/shared/styles"
+              ]
+            },
+            "watch": false,
+            "codeCoverage": true
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "tsconfig.browser.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "main": "src/main.server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "src/app/shared/styles"
+              ]
+            }
+          },
+          "configurations": {
+            "production-en": {
+              "outputPath": "dist/server/en",
+              "i18nFile": "src/i18n/messages.en.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "en",
+              "i18nMissingTranslation": "error",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            },
+            "production-es": {
+              "outputPath": "dist/server/es",
+              "i18nFile": "src/i18n/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es",
+              "i18nMissingTranslation": "error",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ]
+            }
+          }
+        },
+        "xliffmerge": {
+          "builder": "@ngx-i18nsupport/tooling:xliffmerge",
+          "options": {
+            "xliffmergeOptions": {
+              "i18nFormat": "xlf",
+              "srcDir": "src/i18n",
+              "genDir": "src/i18n",
+              "defaultLanguage": "en",
+              "languages": [
+                "en",
+                "es"
+              ]
+            }
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "angularexampleapp:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "angularexampleapp:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "ngx-example-library": {
+      "root": "projects/ngx-example-library",
+      "sourceRoot": "projects/ngx-example-library/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ngx-example-library/tsconfig.lib.json",
+            "project": "projects/ngx-example-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/ngx-example-library/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-example-library/src/test.ts",
+            "tsConfig": "projects/ngx-example-library/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-example-library/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ngx-example-library/tsconfig.lib.json",
+              "projects/ngx-example-library/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "angularexampleapp"
+}

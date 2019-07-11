@@ -1,0 +1,53 @@
+#.travis.yml
+
+dist: trusty
+
+sudo: required
+
+language: node_js
+
+node_js:
+  - 10.16.0
+
+branches:
+  only:
+    - master
+
+git:
+  depth: false
+
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+  sonarcloud:
+    organization: "ismaestro-github"
+
+
+before_script:
+  - set -e
+  - npm install
+  - npm run build:library
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+
+script:
+  - npm run lint
+  - npm run test
+  - npm run e2e
+
+
+before_deploy:
+  - npm run prepare:deploy
+
+deploy:
+  skip_cleanup: true
+
+
+notifications:
+  email:
+    on_failure: change
+    on_success: change

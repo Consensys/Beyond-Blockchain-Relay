@@ -1,0 +1,33 @@
+<mat-card class="article-card" *ngIf="article" [@fadeIn]="fadeIn">
+  <mat-card-header>
+    <!-- <a mat-card-avatar [routerLink]="article?.default ? [routesConfig.routes.articlees.detail(article?.id)] : []">
+      <img alt="article avatar" mat-card-avatar [src]="article?.avatarThumbnailUrl">
+    </a> -->
+    <mat-card-title>
+      <a class="article-detail-link" (click)="onNavigate(article?.url)">
+        {{ article?.title }}
+      </a>
+    </mat-card-title>
+
+    <div class="flex-spacer"></div>
+    <div class="article-actions">
+      <!-- <input type="number" placeholder="TRUE TOKEN" /> -->
+
+      <mat-icon class="icon__like--red" (click)="like(article?.address, 1)"
+        >favorite
+      </mat-icon>
+    </div>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ article?.description }}
+      <a class="article-detail-link" (click)="onNavigate(article?.url)">
+        Read More
+      </a>
+    </p>
+  </mat-card-content>
+
+  <a class="article-detail-link">
+    <img alt="{{ article?.title }} article image" [lazyLoad]="article?.image" />
+  </a>
+</mat-card>
