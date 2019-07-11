@@ -1,0 +1,51 @@
+<% include ../partials/navbar %>
+<script>
+  function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    var timedown = setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        // display.textContent = minutes + ":" + seconds;
+        display.textContent = seconds;
+
+        if (--timer < 0) {
+            // timer = duration;
+            clearInterval(timedown);
+            display.textContent = "0.03 ETH Awarded"
+        }
+        
+    }, 1000);
+    
+}
+
+window.onload = function () {
+    var secondstozero = 10,
+        display = document.querySelector('#time');
+        startTimer(secondstozero, display);
+};
+</script>
+<h1 style="text-align:center;margin:20px;">
+    <span id="time">10</span>
+</h1>
+
+<div class="container">
+    <iframe
+    style="display:block;
+      margin-left: auto;
+      margin-right:auto;
+      right:0;
+      left: 0
+    "
+    title="advert"
+    width="760"
+    height="480"
+    src="https://www.youtube.com/embed/<%= ad.filename %>?&autoplay=1"
+    frameBorder="0"
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowFullScreen
+  />
+</div>

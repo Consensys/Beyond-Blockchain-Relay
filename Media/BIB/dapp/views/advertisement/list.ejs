@@ -1,0 +1,44 @@
+<% include ../partials/navbar %>
+
+<div class="container">
+  <h3>
+    <a class="btn btn-secondary" href="/advertisement/add"
+      ><i class="fa fa-plus"></i> Create New</a
+    >
+    Employee List
+  </h3>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Full Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>City</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% list.forEach(function(employee){ %>
+      <tr>
+        <td><%= employee.fullName %></td>
+        <td><%= employee.email %></td>
+        <td><%= employee.mobile %></td>
+        <td><%= employee.city %></td>
+        <td>
+          <a href="/employee/view/<%= employee._id %>"
+            ><i class="fa fa-eye fa-lg" aria-hidden="true"></i
+          ></a>
+          <a <a href="/employee/<%= employee._id %>"
+            ><i class="fa fa-circle fa-lg" aria-hidden="true"></i
+          ></a>
+          <a
+            href="/employee/delete/<%= employee._id %>"
+            onclick="return confirm('Are you sure to delete this record ?');"
+            ><i class="fa fa-trash fa-lg" aria-hidden="true"></i
+          ></a>
+        </td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+</div>
