@@ -10,7 +10,7 @@
     "@rimble/network-indicator": "^1.2.1",
     "@svgr/webpack": "2.4.1",
     "@walletconnect/web3-subprovider": "^1.0.0-beta.1",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
     "babel-jest": "23.6.0",
