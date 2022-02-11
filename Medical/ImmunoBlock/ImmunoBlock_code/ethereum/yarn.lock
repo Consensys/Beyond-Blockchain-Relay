@@ -2587,7 +2587,7 @@ getpass@^0.1.1:
   dependencies:
     assert-plus "^1.0.0"
 
-girino@^0.0.1-alpha:
+girino@0.0.1-alpha:
   version "0.0.1-alpha"
   resolved "https://registry.yarnpkg.com/girino/-/girino-0.0.1-alpha.tgz#772db6d2c8dc0c17a674128f406241fae43c0d56"
   integrity sha512-E75dAzCz/JS3uowsimTSqVNWlxE+XWz0lj/D6JtMKsFHiT7Kth+pGl4F40Ui9mQe0RvSeMFuhYTLVMgz8AWe6w==
@@ -4664,9 +4664,9 @@ path-type@^3.0.0:
     pify "^3.0.0"
 
 pathval@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.0.tgz#b942e6d4bde653005ef6b71361def8727d0645e0"
-  integrity sha1-uULm1L3mUwBe9rcTYd74cn0GReA=
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.1.tgz#8534e77a77ce7ac5a2512ea21e0fdb8fcf6c3d8d"
+  integrity sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==
 
 pbkdf2@^3.0.17, pbkdf2@^3.0.3:
   version "3.0.17"
@@ -7178,7 +7178,7 @@ yargs-parser@^9.0.2:
   dependencies:
     camelcase "^4.1.0"
 
-yargs@11.1.0, yargs@^11.0.0:
+yargs@11.1.0:
   version "11.1.0"
   resolved "https://registry.yarnpkg.com/yargs/-/yargs-11.1.0.tgz#90b869934ed6e871115ea2ff58b03f4724ed2d77"
   integrity sha512-NwW69J42EsCSanF8kyn5upxvjp5ds+t3+udGBeTbFnERA+lF541DDpMawzo4z6W/QrzNM18D+BPMiOBibnFV5A==
